@@ -1,0 +1,21 @@
+:root {
+    --background: url(../images/img1.jpg);
+    --window-bg: white;
+    --window-border: rgb(53, 53, 53);
+    --fluent-bg: #ffffff9c;
+    --color-text-1: black;
+    --btn-main-hover: #0000001e;
+    --btn-main-press: #00000034;
+    --list-hover: #00000042;
+    --active-list: #0076d7;
+    --link-color: #0076d7;
+    --link-hover-color: #00000048;
+    --link-press-color: #00000031;
+    --table-color: #00000070;
+    --default-color: #0076d7;
+    --cnt-lnk-hover: #00000015;
+    --cnt-lnk-hover-brd: #00000030;
+    --cnt-lnk-press: #00000010;
+    --cnt-lnk-press-brd: #00000020;
+    --app-info-txt: #00000070;
+}
