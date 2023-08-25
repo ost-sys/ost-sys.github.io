@@ -93,7 +93,7 @@ main {
 }
 
 .main-zn {
-    margin: 96px 0 0 0;
+    margin: 95px 0 0 0;
     overflow: auto;
     overflow-x: hidden;
     color: var(--color-text-1);
@@ -118,7 +118,7 @@ main {
     margin: 0 0 0 320px;
     color: var(--color-text-1);
     position: fixed;
-    padding: 48px 20px 5px 20px;
+    padding: 48px 16px 5px 24px;
     background-color: var(--window-bg);
     width: calc(100% - 360px);
     z-index: 2;
@@ -133,7 +133,7 @@ main {
 .container {
     position: relative;
     width: 500px;
-    padding: 20px 0 20px 20px;
+    padding: 20px 0 24px 24px;
     color: var(--color-text-1);
 }
 iframe {
@@ -174,6 +174,7 @@ iframe {
     grid-row-gap: 5px;
 }
 .cnt-lnk {
+    transform: translateX(-10px);
     padding: 5px;
 }
 .cnt-lnk:hover {
@@ -354,4 +355,54 @@ footer {
     color: var(--color-text-1);
     background-color: var(--fluent-bg);
     backdrop-filter: blur(25px);
+}
+
+.lnk-cnt {
+    display: inline-flex;
+    margin: 8px 16px;
+}
+input {
+    color: var(--textarea-text);
+    font-weight: normal;
+    font-size: 14px;
+    height: 28px;
+    width: 250px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 5px;
+    border: none;
+    background-color: var(--textarea-bg);
+    outline: 2px solid var(--textarea-brd);
+}
+input:hover {
+    background-color: var(--textarea-bg-hover);
+    outline: 2px solid var(--textarea-brd-hover);
+}
+input:focus-visible {
+    color: var(--textarea-text-visible);
+    background-color: var(--textarea-bg-visible);
+    outline: 2px solid var(--textarea-brd-visible);
+}
+.btn-cp {
+    color: var(--textarea-text);
+    font-family: Segoe MDL2;
+    font-size: 14px;
+    height: 28px;
+    margin: 0 0 0 7px;
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 7px;
+    border: none;
+    background-color: var(--textarea-bg);
+    outline: 2px solid var(--textarea-brd);
+}
+.btn-cp:hover {
+    background-color: var(--textarea-bg-hover);
+    outline: 2px solid var(--textarea-brd-hover);
+}
+.btn-cp:active {
+    color: var(--textarea-text-visible);
+    background-color: var(--textarea-bg-visible);
+    outline: 2px solid var(--textarea-brd-visible);
 }

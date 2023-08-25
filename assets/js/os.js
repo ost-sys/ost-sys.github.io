@@ -25,4 +25,4 @@ function getPlatform() {
     }
     return 'Неизвестная платформа!' + platform;
 }
-document.write('<span class="fixed-ver">' + getPlatform() + '</span>');
+document.write('<span class="fixed-ver">Текущая ОС: ' + getPlatform() + '</span>');

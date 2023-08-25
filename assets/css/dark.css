@@ -18,4 +18,12 @@
     --cnt-lnk-press: #ffffff10;
     --cnt-lnk-press-brd: #ffffff20;
     --app-info-txt: #ffffff70;
+    --textarea-bg: #00000054;
+    --textarea-bg-hover: #000000a4;
+    --textarea-bg-visible: #ffffff;
+    --textarea-text: #ffffff9a;
+    --textarea-text-visible: #000000;
+    --textarea-brd: #ffffff54;
+    --textarea-brd-hover: #ffffff7a;
+    --textarea-brd-visible: #0076d7;
 }
