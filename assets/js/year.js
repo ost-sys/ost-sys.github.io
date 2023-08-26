@@ -1,1 +1,1 @@
-document.write("Copyright © OST - Operating System Tester, 2022 - ", new Date().getFullYear(), '. Источник хостинга - <a href="https://www.github.com" class="link">Github</a>');
+document.write("Copyright © OST, 2022 - ", new Date().getFullYear(), '. Источник хостинга - <a href="https://www.github.com" class="link">Github</a>');

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/dark.css" media="(prefers-color-scheme: dark)">
     <script src="assets/js/btn-cp.js"></script>
     <script src="assets/js/timer.js"></script>
+    <script src="assets/js/nav.js"></script>
     <title>Информация - OST</title>
 </head>
 <body>
@@ -16,7 +17,7 @@
     <main>
         <div class="st-br">
             <div class="st-br-item-1">
-                <button class="st-bar-btn-back" onclick="history.back()"></button><span class="st-name">Сайт Operating System Tester'а</span>
+                <button class="st-bar-btn-back" onclick="history.back()"></button><button class="st-bar-btn-menu" id="toggleButton"></button><span class="st-name">Сайт Operating System Tester'а</span>
             </div>
             <div class="st-br-item-2">
                 <button class="st-bar-btn-main" onclick="alert('Давайте представим, что эта кнопка заработала как положено 😁')"></button>
@@ -24,7 +25,7 @@
                 <button class="st-bar-btn-main-close" onclick="alert('Давайте представим, что эта кнопка заработала как положено 😁')"></button>
             </div>
         </div>
-        <div class="flnt-zn">
+        <div class="flnt-zn" id="hiddenBlock">
             <li>
                 <a href="index.html"><span class="nav-list"><span class="nav-icon"></span><span class="nav-text">Главная страница</span></span></a>
             </li>
@@ -60,8 +61,8 @@
                 <a href="#"><div class="current"></div><span class="nav-list"><span class="nav-icon"></span><span class="nav-text">Информация</span></span></a>
             </li>
         </div>
-        <h1 class="main-txt">Информация</h1>
         <div class="main-zn">
+            <h1 class="main-txt">Информация</h1>
             <div class="container">
                 <span class="info-txt">Информация обо мне, о моих устройствах и их характиристиках можно найти здесь</span>
                 <h2>Обо мне</h2>

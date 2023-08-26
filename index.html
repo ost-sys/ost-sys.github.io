@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark.css" media="(prefers-color-scheme: dark)">
     <script src="assets/js/btn-cp.js"></script>
+    <script src="assets/js/nav.js"></script>
     <title>Главная - OST</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
     <main>
         <div class="st-br">
             <div class="st-br-item-1">
-                <span class="st-name">Сайт Operating System Tester'а</span>
+                <button class="st-bar-btn-menu" id="toggleButton"></button><span class="st-name">Сайт Operating System Tester'а</span>
             </div>
             <div class="st-br-item-2">
                 <button class="st-bar-btn-main" onclick="alert('Давайте представим, что эта кнопка заработала как положено 😁')"></button>
@@ -23,7 +24,7 @@
                 <button class="st-bar-btn-main-close" onclick="alert('Давайте представим, что эта кнопка заработала как положено 😁')"></button>
             </div>
         </div>
-        <div class="flnt-zn">
+        <div class="flnt-zn" id="hiddenBlock">
             <li>
                 <a href="#"><div class="current"></div><span class="nav-list"><span class="nav-icon"></span><span class="nav-text">Главная страница</span></span></a>
             </li>
@@ -59,11 +60,12 @@
                 <a href="info.html"><span class="nav-list"><span class="nav-icon"></span><span class="nav-text">Информация</span></span></a>
             </li>
         </div>
-        <h1 class="main-txt">Добро пожаловать!</h1>
         <div class="main-zn">
+            <h1 class="main-txt">Добро пожаловать!</h1>
             <div class="container">
                 <span class="info-txt">Здесь можно найти много интересного и полезного для ПК или телефона! Надеюсь ты найдёшь то, что тебе нужно!</span>
-                <iframe width="400" height="210" src="https://www.youtube.com/embed/u2XkvsztD6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <br>
+                <iframe class="yt-cnt" width="400" height="210" src="https://www.youtube.com/embed/u2XkvsztD6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <h2 class="just-txt">Ссылки</h2>
                 <a href="https://nerok64.github.io/">
                     <img src="assets/images/links/nerok_banner.jpg" class="friends-link" alt="Nerok"/>
