@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark.css" media="(prefers-color-scheme: dark)">
     <script src="assets/js/btn-cp.js"></script>
-    <script src="assets/js/nav.js"></script>
     <title>Главная - OST</title>
 </head>
 <body>
@@ -16,7 +15,7 @@
     <main>
         <div class="st-br">
             <div class="st-br-item-1">
-                <button class="st-bar-btn-menu" id="toggleButton"></button><span class="st-name">Сайт Operating System Tester'а</span>
+                <span class="st-name">Сайт Operating System Tester'а</span>
             </div>
             <div class="st-br-item-2">
                 <button class="st-bar-btn-main" onclick="alert('Давайте представим, что эта кнопка заработала как положено 😁')"></button>
@@ -24,74 +23,123 @@
                 <button class="st-bar-btn-main-close" onclick="alert('Давайте представим, что эта кнопка заработала как положено 😁')"></button>
             </div>
         </div>
-        <div class="flnt-zn" id="hiddenBlock">
-            <li>
-                <a href="#"><div class="current"></div><span class="nav-list"><span class="nav-icon"></span><span class="nav-text">Главная страница</span></span></a>
-            </li>
-            <div class="lnk-cnt">
-                <input type="text" value='<a href="https://ost-sys.github.io"><img src="https://ost-sys.github.io/assets/images/ost.png" alt="OST"/></a>' id="myInput">
-                <button class="btn-cp" onclick="myFunction()"></button>
+        <div class="main-zn-index">
+            <div class="info-zn-index">
+                <h2 class="main-wlcm-txt">Operating System Tester</h2>
+                <div class="lnk-cnt-index">
+                    <input type="text" value='<a href="https://ost-sys.github.io"><img src="https://ost-sys.github.io/assets/images/ost.png" alt="OST"/></a>' id="myInput">
+                    <button class="btn-cp" onclick="myFunction()"></button>
+                </div>
             </div>
-            <li>
-                <a href="changelog.html"><span class="nav-list"><span class="nav-icon"></span><span class="nav-text">Список изменений</span></span></a>
-            </li>
-            <li>
-                <a href="pr-win.html"><span class="nav-list"><span class="nav-icon"></span><span class="nav-text">Программы для Windows</span></span></a>
-            </li>
-            <li>
-                <a href="pr-android.html"><span class="nav-list"><span class="nav-icon"></span><span class="nav-text">Программы для Android</span></span></a>
-            </li>
-            <li>
-                <a href="pr-linux.html"><span class="nav-list"><span class="nav-icon"></span><span class="nav-text">Программы для Linux</span></span></a>
-            </li>
-            <li>
-                <a href="md-magisk.html"><span class="nav-list"><span class="nav-icon"></span><span class="nav-text">Модули для Magisk</span></span></a>
-            </li>
-            <li>
-                <a href="customization.html"><span class="nav-list"><span class="nav-icon"></span><span class="nav-text">Кастомизация</span></span></a>
-            </li>
-            <li>
-                <a href="pr-keys.html"><span class="nav-list"><span class="nav-icon"></span><span class="nav-text">Ключи активации</span></span></a>
-            </li>
-            <li>
-                <a href="friends.html"><span class="nav-list"><span class="nav-icon"></span><span class="nav-text">Друзья</span></span></a>
-            </li>
-            <li>
-                <a href="info.html"><span class="nav-list"><span class="nav-icon"></span><span class="nav-text">Информация</span></span></a>
-            </li>
-        </div>
-        <div class="main-zn">
-            <h1 class="main-txt">Добро пожаловать!</h1>
-            <div class="container">
-                <span class="info-txt">Здесь можно найти много интересного и полезного для ПК или телефона! Надеюсь ты найдёшь то, что тебе нужно!</span>
-                <br>
-                <iframe class="yt-cnt" width="400" height="210" src="https://www.youtube.com/embed/u2XkvsztD6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <h2 class="just-txt">Ссылки</h2>
-                <a href="https://nerok64.github.io/">
-                    <img src="assets/images/links/nerok_banner.jpg" class="friends-link" alt="Nerok"/>
-                </a>
-                <a href="https://ertorworld.ru">
-                    <img src="assets/images/links/ertorworld.png" class="friends-link" alt="ertorworld">
-                </a>
-                <a href="https://maydilsiel.github.io">
-                    <img src="https://maydilsiel.github.io/style/pictures/maybanner.png" class="friends-link" alt="maydilsiel">
-                </a>
-                <a href="https://lisikpng.com">
-                    <img src="http://lisikpng.com/img/baner.png" class="friends-link">
-                </a>
-                <a href="http://web1.tinelix.ru/">
-                    <img src="assets/images/links/default.gif" class="friends-link">
-                </a>
-                <a href="https://dsys1100.github.io/">
-                    <img src="assets/images/links/dsys1100.png" class="friends-link" alt="dsys1100">
-                </a>
-                <a href="https://dima-lq.github.io">
-                    <img src="assets/images/links/dimalq.jpg" class="friends-link" alt="Dima LQ">
-                </a>
-                <a href="http://creeper.48ru.ru/">
-                    <img src="http://creeper.48ru.ru/resources/banners/sitebanner.png" class="friends-link">
-                </a>
-                <p class="info-txt">Хочешь быть здесь, пиши в ЛС <a href="https://t.me/OS_Tester">Telegram</a></p>
+            <div class="pillars-cnt">
+                <div class="cnt-index" onclick="document.location='changelog.html'">
+                    <div class="cnt-index-hvr">
+                        <div class="cnt-index-icn">
+                            <span class="icn"></span>
+                        </div>
+                        <div class="cnt-index-txt">
+                            <span class="txt">Список изменений</span>
+                            <br>
+                            <span class="txt-info">Список изменений на сайта</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cnt-index" onclick="document.location='pr-win.html'">
+                    <div class="cnt-index-hvr">
+                        <div class="cnt-index-icn">
+                            <span class="icn"></span>
+                        </div>
+                        <div class="cnt-index-txt">
+                            <span class="txt">Программы для Windows</span>
+                            <br>
+                            <span class="txt-info">Браузеры • Утилиты</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cnt-index" onclick="document.location='pr-android.html'">
+                    <div class="cnt-index-hvr">
+                        <div class="cnt-index-icn">
+                            <span class="icn"></span>
+                        </div>
+                        <div class="cnt-index-txt">
+                            <span class="txt">Программы для Android</span>
+                            <br>
+                            <span class="txt-info">Браузеры • Утилиты</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cnt-index" onclick="document.location='pr-linux.html'">
+                    <div class="cnt-index-hvr">
+                        <div class="cnt-index-icn">
+                            <span class="icn"></span>
+                        </div>
+                        <div class="cnt-index-txt">
+                            <span class="txt">Программы для Linux</span>
+                            <br>
+                            <span class="txt-info">Браузеры • Утилиты</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cnt-index" onclick="document.location='md-magisk.html'">
+                    <div class="cnt-index-hvr">
+                        <div class="cnt-index-icn">
+                            <span class="icn"></span>
+                        </div>
+                        <div class="cnt-index-txt">
+                            <span class="txt">Модули для Magisk</span>
+                            <br>
+                            <span class="txt-info">Pixelify • Better QS • PLE</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cnt-index" onclick="document.location='customization.html'">
+                    <div class="cnt-index-hvr">
+                        <div class="cnt-index-icn">
+                            <span class="icn"></span>
+                        </div>
+                        <div class="cnt-index-txt">
+                            <span class="txt">Кастомизация</span>
+                            <br>
+                            <span class="txt-info">Обои • Темы • Курсоры</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cnt-index" onclick="document.location='pr-keys.html'">
+                    <div class="cnt-index-hvr">
+                        <div class="cnt-index-icn">
+                            <span class="icn"></span>
+                        </div>
+                        <div class="cnt-index-txt">
+                            <span class="txt">Ключи активации</span>
+                            <br>
+                            <span class="txt-info">Windows 7 • Windows 8.1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cnt-index" onclick="document.location='friends.html'">
+                    <div class="cnt-index-hvr">
+                        <div class="cnt-index-icn">
+                            <span class="icn"></span>
+                        </div>
+                        <div class="cnt-index-txt">
+                            <span class="txt">Друзья</span>
+                            <br>
+                            <span class="txt-info">Nerok • dsys1100 • Tinelix</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cnt-index" onclick="document.location='info.html'">
+                    <div class="cnt-index-hvr">
+                        <div class="cnt-index-icn">
+                            <span class="icn"></span>
+                        </div>
+                        <div class="cnt-index-txt">
+                            <span class="txt">Информация</span>
+                            <br>
+                            <span class="txt-info">Обо мне • Мой ПК</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
