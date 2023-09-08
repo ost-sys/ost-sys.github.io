@@ -8,30 +8,49 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark.css" media="(prefers-color-scheme: dark)">
     <script src="assets/js/btn-cp.js"></script>
+    <script src="assets/js/expand-index.js"></script>
     <title>Главная - OST</title>
 </head>
 <body>
     <script src="assets/js/os.js"></script>
+    <div class="restore-btn">
+        <div class="app-icn"><img src="assets/images/icon.ico" alt=""></div>
+        <span class="app-txt">OST Web</span>
+    </div>
     <main>
         <div class="st-br">
             <div class="st-br-item-1">
                 <span class="st-name">Сайт Operating System Tester'а</span>
             </div>
             <div class="st-br-item-2">
-                <button class="st-bar-btn-main" onclick="alert('Давайте представим, что эта кнопка заработала как положено 😁')"></button>
-                <button class="st-bar-btn-main" onclick="alert('Давайте представим, что эта кнопка заработала как положено 😁')"></button>
-                <button class="st-bar-btn-main-close" onclick="alert('Давайте представим, что эта кнопка заработала как положено 😁')"></button>
+                <button class="st-bar-btn-main-hide"></button>
+                <button class="st-bar-btn-main-expand" id="expand" onclick="toggleSize()"></button>
+                <button class="st-bar-btn-main-close-index"></button>
             </div>
         </div>
         <div class="main-zn-index">
             <div class="info-zn-index">
-                <h2 class="main-wlcm-txt">Operating System Tester</h2>
-                <div class="lnk-cnt-index">
-                    <input type="text" value='<a href="https://ost-sys.github.io"><img src="https://ost-sys.github.io/assets/images/ost.png" alt="OST"/></a>' id="myInput">
-                    <button class="btn-cp" onclick="myFunction()"></button>
+                <div class="logo" onclick="document.location='info.html'">
+                    <div class="big-wlcm-logo">
+                        <img src="assets/images/icon.ico" alt="">
+                    </div>
+                    <div class="about-creator-txt">
+                        <h2 class="user">Operating System Tester</h2>
+                        <h4 class="user-info">Владелец сайта</h4>
+                    </div>
+                </div>
+                <div class="notification" onclick="document.location='https://www.youtube.com/watch?v=HYT14z3lSsc&t=105s'">
+                    <div class="noti-logo">
+                        <span class="noti-logo-txt"></span>
+                    </div>
+                    <span class="noti-txt-main">Последнее видео на канале "Operating System Tester"</span>
                 </div>
             </div>
-            <div class="pillars-cnt">
+            <div class="lnk-cnt-index">
+                <input type="text" value='<a href="https://ost-sys.github.io"><img src="https://ost-sys.github.io/assets/images/ost.png" alt="OST"/></a>' id="myInput">
+                <button class="btn-cp" onclick="myFunction()"></button>
+            </div>
+            <div class="pillars-cnt" id="cnt">
                 <div class="cnt-index" onclick="document.location='changelog.html'">
                     <div class="cnt-index-hvr">
                         <div class="cnt-index-icn">
@@ -144,13 +163,14 @@
         </div>
     </main>
     <footer>
-        <div>
-            <script src="assets/js/year.js"></script>
+        <div class="taskbar-icn active">
+            <img src="assets/images/icon.ico">
         </div>
         <div>
             <script src="assets/js/clock.js"></script>
             <span id="clock" class="time"></span>
         </div>
+        <script src="assets/js/close-index.js"></script>
     </footer>
 </body>
 </html>

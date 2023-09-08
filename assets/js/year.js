@@ -1,1 +1,1 @@
-document.write("Copyright © OST, 2022 - ", new Date().getFullYear(), '. Источник хостинга - <a href="https://www.github.com" class="link">Github</a>');
+document.write("<span class='copyright'>Copyright © OST, 2022 - ", new Date().getFullYear(), ". Источник хостинга - <a href='https://www.github.com' class='link'>Github</a></span>");

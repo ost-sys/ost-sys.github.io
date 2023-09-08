@@ -23,6 +23,6 @@ var x = setInterval(function() {
     // If the count down is over, write some text 
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("demo").innerHTML = "С днём рождения, WT!";
+        document.getElementById("demo").innerHTML = "С днём рождения, OST!";
     }
 }, 1000);

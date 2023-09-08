@@ -1,12 +1,11 @@
 :root {
-    --background: url(../images/img0.jpg);
     --window-bg: black;
     --window-border: rgb(53, 53, 53);
     --fluent-bg: #0000009c;
     --color-text-1: white;
     --btn-main-hover: #ffffff1e;
     --btn-main-press: #ffffff34;
-    --list-hover: #ffffff42;
+    --list-hover: #ffffff22;
     --active-list: #0076d7;
     --link-color: #0076d7;
     --link-hover-color: #ffffff48;
@@ -26,4 +25,9 @@
     --textarea-brd: #ffffff54;
     --textarea-brd-hover: #ffffff7a;
     --textarea-brd-visible: #0076d7;
+    --taskbar-icn-hover: #ffffff30;
+    --taskbar-icn-press: #ffffff50;
+    --taskbar-icn-active: #ffffff60;
+    --main-zn-info: #171717;
+    --user-info: #ffffff70;
 }

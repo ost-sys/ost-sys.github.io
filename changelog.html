@@ -9,19 +9,24 @@
     <link rel="stylesheet" href="assets/css/dark.css" media="(prefers-color-scheme: dark)">
     <script src="assets/js/btn-cp.js"></script>
     <script src="assets/js/nav.js"></script>
+    <script src="assets/js/expand.js"></script>
     <title>Список изменений - OST</title>
 </head>
 <body>
     <script src="assets/js/os.js"></script>
+    <div class="restore-btn">
+        <div class="app-icn"><img src="assets/images/icon.ico" alt=""></div>
+        <span class="app-txt">OST Web</span>
+    </div>
     <main>
         <div class="st-br">
             <div class="st-br-item-1">
                 <button class="st-bar-btn-back" onclick="history.back()"></button><button class="st-bar-btn-menu" id="toggleButton"></button><span class="st-name">Сайт Operating System Tester'а</span>
             </div>
             <div class="st-br-item-2">
-                <button class="st-bar-btn-main" onclick="alert('Давайте представим, что эта кнопка заработала как положено 😁')"></button>
-                <button class="st-bar-btn-main" onclick="alert('Давайте представим, что эта кнопка заработала как положено 😁')"></button>
-                <button class="st-bar-btn-main-close" onclick="alert('Давайте представим, что эта кнопка заработала как положено 😁')"></button>
+                <button class="st-bar-btn-main-hide"></button>
+                <button class="st-bar-btn-main-expand" id="expand" onclick="toggleSize()"></button>
+                <button class="st-bar-btn-main-close"></button>
             </div>
         </div>
         <div class="flnt-zn" id="hiddenBlock">
@@ -64,6 +69,33 @@
             <h1 class="main-txt">Список изменений</h1>
             <div class="container">
                 <span class="info-txt">Вся информация о новых функциях на сайте будет отображаться здесь</span>
+                <h2 class="just-txt">Версия 2.0.0</h2>
+                <table>
+                    <tr>
+                        <td>Номер №1</td><td class="table-info">Добавлена панель задач</td>
+                    </tr>
+                    <tr>
+                        <td>Номер №2</td><td class="table-info">Добавлена иконка на главный экран</td>
+                    </tr>
+                    <tr>
+                        <td>Номер №3</td><td class="table-info">Добалена функция "Закрыть окно"</td>
+                    </tr>
+                    <tr>
+                        <td>Номер №4</td><td class="table-info">Добалена функция "Развернуть окно"</td>
+                    </tr>
+                    <tr>
+                        <td>Номер №5</td><td class="table-info">Добалена функция "Свернуть окно"</td>
+                    </tr>
+                    <tr>
+                        <td>Номер №6</td><td class="table-info">Изменён дизайн главной страницы в стиле современных версий</td>
+                    </tr>
+                    <tr>
+                        <td>Номер №7</td><td class="table-info">Самую малость изменён цвет в панели навигации при наведении</td>
+                    </tr>
+                    <tr>
+                        <td>Номер №8</td><td class="table-info">Выделение текста отключено</td>
+                    </tr>
+                </table>
                 <h2 class="just-txt">Версия 1.3.0</h2>
                 <table>
                     <tr>
@@ -107,13 +139,14 @@
         </div>
     </main>
     <footer>
-        <div>
-            <script src="assets/js/year.js"></script>
+        <div class="taskbar-icn active">
+            <img src="assets/images/icon.ico">
         </div>
         <div>
             <script src="assets/js/clock.js"></script>
             <span id="clock" class="time"></span>
         </div>
+        <script src="assets/js/close.js"></script>
     </footer>
 </body>
 </html>

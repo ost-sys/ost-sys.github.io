@@ -9,19 +9,24 @@
     <link rel="stylesheet" href="assets/css/dark.css" media="(prefers-color-scheme: dark)">
     <script src="assets/js/btn-cp.js"></script>
     <script src="assets/js/nav.js"></script>
+    <script src="assets/js/expand.js"></script>
     <title>Ключи активации - OST</title>
 </head>
 <body>
     <script src="assets/js/os.js"></script>
+    <div class="restore-btn">
+        <div class="app-icn"><img src="assets/images/icon.ico" alt=""></div>
+        <span class="app-txt">OST Web</span>
+    </div>
     <main>
         <div class="st-br">
             <div class="st-br-item-1">
                 <button class="st-bar-btn-back" onclick="history.back()"></button><button class="st-bar-btn-menu" id="toggleButton"></button><span class="st-name">Сайт Operating System Tester'а</span>
             </div>
             <div class="st-br-item-2">
-                <button class="st-bar-btn-main" onclick="alert('Давайте представим, что эта кнопка заработала как положено 😁')"></button>
-                <button class="st-bar-btn-main" onclick="alert('Давайте представим, что эта кнопка заработала как положено 😁')"></button>
-                <button class="st-bar-btn-main-close" onclick="alert('Давайте представим, что эта кнопка заработала как положено 😁')"></button>
+                <button class="st-bar-btn-main-hide"></button>
+                <button class="st-bar-btn-main-expand" id="expand" onclick="toggleSize()"></button>
+                <button class="st-bar-btn-main-close"></button>
             </div>
         </div>
         <div class="flnt-zn" id="hiddenBlock">
@@ -144,13 +149,14 @@
         </div>
     </main>
     <footer>
-        <div>
-            <script src="assets/js/year.js"></script>
+        <div class="taskbar-icn active">
+            <img src="assets/images/icon.ico">
         </div>
         <div>
             <script src="assets/js/clock.js"></script>
             <span id="clock" class="time"></span>
         </div>
+        <script src="assets/js/close.js"></script>
     </footer>
 </body>
 </html>
