@@ -557,6 +557,7 @@ iframe {
 .table-info {
     color: var(--table-color);
     font-weight: normal;
+    user-select: text;
 }
 td, th {
     padding: 5px 10px 5px 0;
@@ -702,7 +703,6 @@ input:focus-visible {
         background-color: var(--window-bg);
     }
     main {
-        margin: 40px 0;
         top: 0;
         left: 0;
         margin-right: 0;
@@ -716,7 +716,6 @@ input:focus-visible {
     }
     .main-txt {
         padding: 48px 16px 5px 15px;
-        margin: 40px 0;
         background-color: var(--fluent-bg);
         backdrop-filter: blur(10px);
         width: 100%;
@@ -744,9 +743,12 @@ input:focus-visible {
     }
     .lnk-zn {
         position: relative;
-        padding: 0 0 90px 15px;
+        padding: 0 0 30px 15px;
         top: 0;
         right: 0;
+    }
+    .copyright {
+        padding: 0 0 60px 15px;
     }
     .yt-cnt {
         width: auto;
