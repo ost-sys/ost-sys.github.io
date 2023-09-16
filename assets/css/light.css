@@ -1,4 +1,5 @@
 :root {
+    --wallpaper: url(../images/light.jpg);
     --window-bg: white;
     --window-border: rgb(53, 53, 53);
     --fluent-bg: #ffffff9c;
@@ -30,4 +31,9 @@
     --taskbar-icn-active: #00000060; 
     --main-zn-info: #f2f2f2;
     --user-info: #00000070;
+    --button: #cccccc;
+    --button-hover-border: #7a7a7a;
+    --button-press: #999999;
+    --button-disabled-txt: #7a7a7a;
+    --wave: radial-gradient(#808080, #00000000);
 }

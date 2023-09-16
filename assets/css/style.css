@@ -27,13 +27,13 @@ a:active {
 }
 body {
     margin: 0; 
-    background: url(../images/img0.jpg);
+    background: var(--wallpaper);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
     min-height: 100%;
     background-size: cover;
-    transition: all 0.2s;
+    transition: all 1s ease-in-out;
 }
 .restore-btn {
     position: fixed;
@@ -97,6 +97,7 @@ main {
     display: flex;
     flex-direction: column;
     backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     background-color: var(--fluent-bg);
     width: 430px;
     z-index: 1;
@@ -104,6 +105,9 @@ main {
     overflow: auto;
 }
 .flnt-zn li a {
+    position: relative;
+    display: block;
+    overflow: hidden;
     color: var(--color-text-1);
     font-size: 16px;
     display: flex;
@@ -172,6 +176,8 @@ main {
     grid-row-gap: 20px;
 }
 .cnt-index {
+    position: relative;
+    overflow: hidden;
     cursor: pointer;
     height: 80px;
     transition: 0.1s ease-in-out;
@@ -212,6 +218,7 @@ main {
     font-size: 16px;
 }
 .txt-info {
+    font-weight: normal;
     font-size: 14px;
     color: var(--table-color);
 }
@@ -327,7 +334,8 @@ main {
     100% {scale: 1; opacity: 1;}
 }
 iframe {
-    padding: 40px 0 0 0;
+    width: 100%;
+    height: 300px;
 }
 
 .lnk-zn {
@@ -433,6 +441,7 @@ iframe {
     text-align: center;
     align-items: center;
     display: flex;
+    margin: 0;
     background-color: transparent;
     color: var(--color-text-1);
     border: none;
@@ -440,6 +449,8 @@ iframe {
     width: 48px;
     padding: 5px;
     justify-content: center;
+    transition: none;
+    animation: none;
 }
 .st-bar-btn-menu {
     display: none;
@@ -447,10 +458,13 @@ iframe {
 .st-bar-btn-back:hover {
     background-color: #0078D7;
     color: white;
+    box-shadow: none;
 }
 .st-bar-btn-back:active {
     background-color: #3392df;
     color: white;
+    opacity: 1;
+    scale: 1;
 }
 
 .st-br-item-2 {
@@ -461,6 +475,7 @@ iframe {
     text-align: center;
     align-items: center;
     display: flex;
+    margin: 0;
     background-color: transparent;
     color: var(--color-text-1);
     border: none;
@@ -469,18 +484,24 @@ iframe {
     width: 48px;
     padding: 5px;
     justify-content: center;
+    transition: none;
+    animation: none;
 }
 .st-bar-btn-main-hide:hover {
     background-color: var(--btn-main-hover);
+    box-shadow: none;
 }
 .st-bar-btn-main-hide:active {
     background-color: var(--btn-main-press);
+    opacity: 1;
+    scale: 1;
 }
 .st-bar-btn-main-expand {
     font-family: Segoe MDL2;
     text-align: center;
     align-items: center;
     display: flex;
+    margin: 0;
     background-color: transparent;
     color: var(--color-text-1);
     border: none;
@@ -489,18 +510,24 @@ iframe {
     width: 48px;
     padding: 5px;
     justify-content: center;
+    transition: none;
+    animation: none;
 }
 .st-bar-btn-main-expand:hover {
     background-color: var(--btn-main-hover);
+    box-shadow: none;
 }
 .st-bar-btn-main-expand:active {
     background-color: var(--btn-main-press);
+    opacity: 1;
+    scale: 1;
 }
 .st-bar-btn-main-close {
     font-family: Segoe MDL2;
     text-align: center;
     align-items: center;
     display: flex;
+    margin: 0;
     background-color: var(--window-bg);
     color: var(--color-text-1);
     border: none;
@@ -509,16 +536,23 @@ iframe {
     width: 48px;
     padding: 5px;
     justify-content: center;
+    transition: none;
+    animation: none;
 }
 .st-bar-btn-main-close:hover {
+    box-shadow: none;
     color: white;
     background-color: #e81123;
 }
 .st-bar-btn-main-close:active {
+    opacity: 1;
+    scale: 1;
     color: black;
     background-color: #f1707b;
 }
 .st-bar-btn-main-close-index {
+    margin: 0;
+    transition: none;
     font-family: Segoe MDL2;
     text-align: center;
     align-items: center;
@@ -531,12 +565,17 @@ iframe {
     width: 48px;
     padding: 5px;
     justify-content: center;
+    transition: none;
+    animation: none;
 }
 .st-bar-btn-main-close-index:hover {
+    box-shadow: none;
     color: white;
     background-color: #e81123;
 }
 .st-bar-btn-main-close-index:active {
+    opacity: 1;
+    scale: 1;
     color: black;
     background-color: #f1707b;
 }
@@ -574,6 +613,7 @@ footer {
     color: var(--color-text-1);
     background-color: var(--fluent-bg);
     backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     justify-content: space-between;
     bottom: 0;
     z-index: 5;
@@ -598,6 +638,7 @@ footer {
     color: var(--color-text-1);
     background-color: var(--fluent-bg);
     backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
 }
 
 .lnk-cnt {
@@ -647,10 +688,13 @@ input:focus-visible {
     outline: 2px solid var(--textarea-brd);
 }
 .btn-cp:hover {
+    box-shadow: none;
     background-color: var(--textarea-bg-hover);
     outline: 2px solid var(--textarea-brd-hover);
 }
 .btn-cp:active {
+    opacity: 1;
+    scale: 1;
     color: var(--textarea-text-visible);
     background-color: var(--textarea-bg-visible);
     outline: 2px solid var(--textarea-brd-visible);
@@ -694,6 +738,55 @@ input:focus-visible {
     justify-content: center;
 }
 
+.btn-default {
+    margin: 5px 0;
+    padding: 7px 14px;
+    border: none;
+    font-weight: normal;
+    transition: 0.1s ease-in-out;
+    background-color: var(--button);
+    color: var(--color-text-1);
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.btn-default:hover {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 2px var(--button-hover-border);
+}
+.btn-default:active {
+    box-shadow: none;
+    background-color: var(--button-press);
+    scale: 0.96;
+    opacity: 0.9;
+}
+.btn-default:disabled {
+    color: var(--button-disabled-txt);
+    box-shadow: none;
+}
+.btn-default:disabled:active {
+    background-color: var(--button);
+    scale: 1;
+    opacity: 1;
+}
+.wave {
+    background-image: var(--wave);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: wave .5s ease-in-out;
+    pointer-events: none;
+    position: absolute;
+}
+  
+@keyframes wave {
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
 @media (max-width: 800px) {
     .st-bar-btn-main-expand {
         display: none;
@@ -712,13 +805,15 @@ input:focus-visible {
         border: none;
     }
     .main-zn {
-        width: auto;
+        width: 100%;
     }
     .main-txt {
         padding: 48px 16px 5px 15px;
         background-color: var(--fluent-bg);
         backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         width: 100%;
+        font-weight: 400;
     }
     #hiddenBlock {
         display: none;
