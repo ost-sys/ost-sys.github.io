@@ -96,8 +96,8 @@ main {
     list-style: none;
     display: flex;
     flex-direction: column;
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
     background-color: var(--fluent-bg);
     width: 430px;
     z-index: 1;
@@ -612,19 +612,20 @@ footer {
     align-items: center;
     color: var(--color-text-1);
     background-color: var(--fluent-bg);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
     justify-content: space-between;
-    bottom: 0;
+    bottom: -40px;
+    transition: 0.2s ease-in-out;
     z-index: 5;
 }
 .time {
     display: flex;
     justify-content: center;
-    width: 100px;
+    width: 80px;
 }
 .fixed-ver {
-    top: 0;
+    top: -40px;
     left: 50%;
     transform: translate(-50%, 0);
     width: 100%;
@@ -633,12 +634,12 @@ footer {
     position: fixed;
     text-align: center;
     align-items: center;
-    padding: -1px 0 0 0;
     justify-content: center;
     color: var(--color-text-1);
     background-color: var(--fluent-bg);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    transition: 0.2s ease-in-out;
 }
 
 .lnk-cnt {
@@ -791,9 +792,11 @@ input:focus-visible {
     .st-bar-btn-main-expand {
         display: none;
     }
+    .st-bar-btn-main-close {
+        background-color: transparent;
+    }
     .st-br {
         z-index: 6;
-        background-color: var(--window-bg);
     }
     main {
         top: 0;
@@ -807,13 +810,15 @@ input:focus-visible {
     .main-zn {
         width: 100%;
     }
+    .main-zn::-webkit-scrollbar {
+        width: 0px;
+    }
     .main-txt {
         padding: 48px 16px 5px 15px;
         background-color: var(--fluent-bg);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
         width: 100%;
-        font-weight: 400;
     }
     #hiddenBlock {
         display: none;
@@ -886,9 +891,15 @@ input:focus-visible {
     .fixed-ver {
         width: 100%;
     }
+    .pillars {
+        grid-template-columns: repeat(1, minmax(auto, 1fr));
+    }
 
     .main-zn-index {
         width: 100%;
+    }
+    .main-zn-index::-webkit-scrollbar {
+        width: 0px;
     }
     .main-wlcm-txt {
         display: none;
