@@ -3,7 +3,7 @@
     src: url(../fonts/SEGMDL2.TTF);
 }
 @font-face {
-    font-family: Segoe Fluent;
+    font-family: Segoe MDL2;
     src: url(../fonts/SEGFLUENT.ttf);
 }
 * {
@@ -67,6 +67,7 @@ body {
     text-align: center;
     width: 100%;
     color: white;
+    text-shadow: 2px 2px 2px #000000;
     font-size: 12px;
 }
 
@@ -134,6 +135,7 @@ main {
     transition: all 0.1s ease-in-out;
 }
 .nav-text {
+    text-shadow: 0px 0px 1px #00000075;
     display: inline-flex;
     align-items: center;
     text-align: center;
@@ -838,7 +840,7 @@ input:focus-visible {
         width: 100%;
     }
     .container {
-        padding: 24px 15px 90px 15px;
+        padding: 24px 15px 50px 15px;
         width: auto;
     }
     .lnk-zn {
@@ -944,6 +946,9 @@ input:focus-visible {
         width: auto;
         align-items: center;
         flex-direction: row;
+    }
+    .cnt-lnk {
+        transform: translateX(0);
     }
 }
     
