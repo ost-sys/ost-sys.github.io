@@ -1,8 +1,11 @@
 :root {
-    --wallpaper: url(../images/light.jpg);
+    --wallpaper: url(../images/light-winter.jpg);
+    --startmenu: black;
     --window-bg: white;
     --window-border: rgb(53, 53, 53);
     --fluent-bg: #ffffff9c;
+    --uwp-button-bg: #ffffff59;
+    --uwp-button-bg-hover: #ffffff85;
     --color-text-1: black;
     --btn-main-hover: #0000001e;
     --btn-main-press: #00000034;
