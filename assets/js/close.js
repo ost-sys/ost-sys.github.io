@@ -6,6 +6,8 @@ const taskbarBtn = document.querySelector('.taskbar-icn')
 const navbar = document.querySelector("footer")
 const model = document.querySelector(".fixed-ver")
 const startMenu = document.getElementById("startmenu")
+const notiBtn = document.querySelector('.notification-button');
+const notiCenter = document.querySelector(".notification-center");
 
 closeBtn.addEventListener('click', function() {
     block.style.opacity = '0';
@@ -48,5 +50,8 @@ taskbarBtn.addEventListener('click', function() {
     taskbarBtn.classList.add("active")
     startMenu.style.transform = "translateY(20px)";
     startMenu.style.opacity = 0;
+    notiCenter.style.opacity = 0;
+    notiCenter.style.right = "-600px";
+    notiBtn.classList.remove("active");
     setTimeout(() => startMenu.style.display = "none", 200)
 });

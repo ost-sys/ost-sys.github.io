@@ -17,6 +17,65 @@
         <div class="app-icn"><img src="assets/images/icon.ico" alt=""></div>
         <span class="app-txt">OST Web</span>
     </div>
+    <!-- <div class="notification-center">
+        <h5 class="notification-center-name">Список изменений</h5>
+        <div class="changelog">
+            <div class="changelog-sector">
+                <div class="changelog-info-main" onclick="changeSize(this)">
+                    <h3>Версия 3.0.0</h3>
+                    <table>
+                        <tr><td class="table-info">1</td><td class="table-info">Добавлено меню "Пуск", которое содержит в себе ссылки на мои соц. сети</td></tr>
+                        <tr><td class="table-info">2</td><td class="table-info">Страницы находятся в 1-ом HTML файле</td></tr>
+                        <tr><td class="table-info">3</td><td class="table-info">Добавлен баннер с последним видео на главной странице</td></tr>
+                    </table>
+                </div>
+                <div class="changelog-list">
+                    <table>
+                        <tr><td class="table-info">4</td><td class="table-info">Добавлена станция ErtorWorldTheStationFM</td></tr>
+                        <tr>
+                            <td class="table-info">5</td><td class="table-info">Улучшены анимации</td>
+                        </tr>
+                        <tr>
+                            <td class="table-info">6</td><td class="table-info">Новые обои</td>
+                        </tr>
+                        <tr>
+                            <td class="table-info">7</td><td class="table-info">Окно "Оповещение" при нажатии на пользователя, у которого был сайт/канал</td>
+                        </tr>
+                        <tr>
+                            <td class="table-info">8</td><td class="table-info">На панели задач больше иконок (Ярлыки друзей)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="changelog-sector" onclick="changeSize(this)">
+                <div class="changelog-info-main">
+                    <h3>Версия 3.0.0</h3>
+                    <table>
+                        <tr><td class="table-info">1</td><td class="table-info">Добавлено меню "Пуск", которое содержит в себе ссылки на мои соц. сети</td></tr>
+                        <tr><td class="table-info">2</td><td class="table-info">Страницы находятся в 1-ом HTML файле</td></tr>
+                        <tr><td class="table-info">3</td><td class="table-info">Добавлен баннер с последним видео на главной странице</td></tr>
+                    </table>
+                </div>
+                <div class="changelog-list">
+                    <table>
+                        <tr><td class="table-info">4</td><td class="table-info">Добавлена станция ErtorWorldTheStationFM</td></tr>
+                        <tr>
+                            <td class="table-info">5</td><td class="table-info">Улучшены анимации</td>
+                        </tr>
+                        <tr>
+                            <td class="table-info">6</td><td class="table-info">Новые обои</td>
+                        </tr>
+                        <tr>
+                            <td class="table-info">7</td><td class="table-info">Окно "Оповещение" при нажатии на пользователя, у которого был сайт/канал</td>
+                        </tr>
+                        <tr>
+                            <td class="table-info">8</td><td class="table-info">На панели задач больше иконок (Ярлыки друзей)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div> -->
     <div class="win-start-menu" id="startmenu">
         <h4 class="start-menu-big-txt">Ссылки</h4>
         <div class="uwp-sector">
@@ -70,7 +129,7 @@
                         <h4 class="user-info">Владелец сайта</h4>
                     </div>
                 </div>
-                <div class="notification" onclick="document.location='https://www.youtube.com/watch?v=HYT14z3lSsc&t=105s'">
+                <div class="notification" onclick="document.location='https://www.youtube.com/watch?v=W1suYyZmv2w'">
                     <div class="noti-logo">
                         <span class="noti-logo-txt"></span>
                     </div>
@@ -78,7 +137,7 @@
                 </div>
             </div>
             <div class="lnk-cnt-index">
-                <input type="text" value='<a href="https://ost-sys.github.io"><img src="https://ost-sys.github.io/assets/images/ost.png" alt="OST"/></a>' id="myInput">
+                <input type="text" placeholder="Um... For what?" value='<a href="https://ost-sys.github.io"><img src="https://ost-sys.github.io/assets/images/ost.png" alt="OST"/></a>' id="myInput">
                 <button class="btn-cp" onclick="myFunction()"></button>
             </div>
             <div class="main-sectors">
@@ -109,7 +168,7 @@
                     </div>
                 </div>
                 <div class="youtube-last-video">
-                    <iframe src="https://www.youtube-nocookie.com/embed/HYT14z3lSsc?si=dMroPQ7LVCFEncej" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/W1suYyZmv2w?si=8Gtz_PaH7OfCPsdX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -150,14 +209,20 @@
                 <img src="assets/images/friends/rivixal.jpg">
             </div>
         </div>
-        <div>
-            <script src="assets/js/clock.js"></script>
-            <span id="clock" class="time"></span>
+        <div class="system-icons">
+            <div class="time">
+                <script src="assets/js/clock.js"></script>
+                <span id="clock" class="time"></span>
+            </div>
+            <!-- <div class="taskbar-buttons">
+                <div class="notification-button"></div>
+            </div> -->
         </div>
         <script src="assets/js/close.js"></script>
         <script src="assets/js/startmenu.js"></script>
         <script src="assets/js/btn-anim.js"></script>
         <script src="assets/js/warning-other.js"></script>
+        <!-- <script src="assets/js/notification.js"></script> -->
     </footer>
 </body>
 </html>

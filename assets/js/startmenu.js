@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const startMenuIcon = document.querySelector(".start-menu")
     const screenBtn = document.getElementById("screen")
     const restoreBtn = document.querySelector('.restore-btn');
+    const notiBtn = document.querySelector('.notification-button');
+    const notiCenter = document.querySelector(".notification-center");
     
     let isVisible = false;
 
@@ -19,10 +21,27 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => startMenu.style.display = "none", 200)
         }
     })
+
+    // notiBtn.addEventListener('click', function() {
+    //     isVisible = !isVisible;
+
+    //     if (isVisible) {
+    //         notiCenter.style.right = 0;
+    //         notiCenter.style.opacity = 1;
+    //         notiBtn.classList.add("active");
+    //     } else {
+    //         notiCenter.style.right = "-600px";
+    //         notiCenter.style.opacity = 0;
+    //         notiBtn.classList.remove("active");
+    //     }
+    // })
     
     screenBtn.addEventListener('click', function() {
         startMenu.style.transform = "translateY(20px)";
         startMenu.style.opacity = 0;
+        notiCenter.style.opacity = 0;
+        notiCenter.style.right = "-600px";
+        notiBtn.classList.remove("active");
         setTimeout(() => startMenu.style.display = "none", 200)
         isVisible = !isVisible
     })
@@ -30,6 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
     restoreBtn.addEventListener('click', function() {
         startMenu.style.transform = "translateY(20px)";
         startMenu.style.opacity = 0;
+        notiCenter.style.opacity = 0;
+        notiCenter.style.right = "-600px";
+        notiBtn.classList.remove("active");
         setTimeout(() => startMenu.style.display = "none", 200)
         isVisible = !isVisible
     })

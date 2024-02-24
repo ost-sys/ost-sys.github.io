@@ -290,7 +290,7 @@ main {
 }
 
 .main-zn {
-    padding: 95px 0 0 0;
+    margin: 90px 0 0 0;
     overflow: auto;
     overflow-x: hidden;
     color: var(--color-text-1);
@@ -319,7 +319,6 @@ main {
     width: -moz-available;
     z-index: 2;
     transition: 0.2s ease-in-out;
-    animation: 0.18s other ease-in-out;
 }
 @keyframes other {
     0% {scale: 0.98; opacity: 0.9;}
