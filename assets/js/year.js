@@ -1,1 +1,0 @@
-document.write("<span class='copyright'>Copyright © OST, 2022 - ", new Date().getFullYear(), ". <a href='https://www.github.com' class='link'>Github</a></span>");
