@@ -109,3 +109,8 @@ h4 {
     }
 }
 
+@media (max-width: 1279px) {
+    main {
+        zoom: 0.35;
+    }
+}
