@@ -1,0 +1,111 @@
+@font-face {
+    font-family: font;
+    src: url(font.ttf);
+}
+
+* {
+    font-family: font;
+    color: #F7E6C8;
+    text-shadow: #F7E6C890 0px 0px 4px;
+    user-select: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+body {
+    background-image: radial-gradient(#663300, #000);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100%;
+    background-size: cover;
+    transition: all 1s ease-in-out;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 700px;
+    border: #F8E7C8 solid 4px;
+    overflow: hidden; /* Скрыть содержимое, выходящее за границы */
+    animation: resizeMain 2s steps(2) infinite; /* Резкая анимация */
+}
+
+toolbar {
+    border-bottom: #F8E7C8 solid 4px;
+}
+
+main-content {
+    display: flex;
+    flex-direction: row;
+    margin: 28px 62px;
+}
+
+.logo {
+    mask-image: url(error.png);
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    background-color: #F7E6C8;
+    width: 300px;
+    height: 300px;
+}
+
+linear-layout {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: end;
+}
+
+h1 {
+    font-size: 110px;
+    margin-top: 15px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+h4 {
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.title {
+    font-size: 53px;
+    margin: 27px 37px;
+    font-weight: bold;
+}
+
+/* Анимация изменения размера */
+@keyframes resizeMain {
+    0% {
+        opacity: 1
+    }
+    23% {
+        opacity: 0.2
+    }
+    52% {
+        opacity: 0.5
+    }
+    65% {
+        opacity: 0.3
+    }
+    84% {
+        opacity: 0.9
+    }
+    100% {
+        opacity: 1
+    }
+}
+
