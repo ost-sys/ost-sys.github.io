@@ -109,7 +109,7 @@ main.window-maximized {
     left: 0 !important;
     margin-right: 0 !important;
     transform: none !important; 
-    border-radius: 0 !important; /* У развернутого окна углы прямые */
+    border-radius: 0 !important;
     border: none !important;
 }
 
@@ -789,7 +789,7 @@ input:focus-visible {
 .win-start-menu.opened {
     visibility: visible;
     opacity: 1 !important;
-    transform: translateY(0) !important; /* Поднимается наверх при открытии */
+    transform: translateY(0) !important;
     pointer-events: auto;
 }
 .uwp-sector {
@@ -840,42 +840,6 @@ input:focus-visible {
 .system-icons {
     display: flex;
     flex-direction: row;
-}
-.notification-button {
-    font-family: Segoe MDL2;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.notification-button:hover {
-    background-color: var(--taskbar-icn-hover);
-}
-.notification-button:active {
-    background-color: var(--taskbar-icn-active);
-}
-.notification-button.active {
-    background-color: var(--taskbar-icn-active);
-}
-
-.notification-center {
-    position: fixed;
-    right: -600px;
-    bottom: 40px;
-    width: 400px;
-    padding: 16px;
-    height: calc(100% - 72px);
-    opacity: 0;
-    background-color: var(--fluent-bg);
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
-    transition: 0.4s ease-in-out;
-}
-.notification-center .notification-center-name {
-    color: var(--color-text-1);
-    margin: 0;
-    text-align: right;
 }
 .changelog {
     margin: 50px 0 0 0;
@@ -1026,6 +990,34 @@ audio::-webkit-media-controls-enclosure{
     border-radius: 0px;
 }
 
+#nolink {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;  
+}
+
+.tooltiptext {
+    visibility: hidden;
+    background-color: var(--window-bg);
+    border: 1px solid var(--window-border);
+    color: var(--color-text-1);
+    text-align: center;
+    padding: 6px;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    margin-left: -86px;
+    box-shadow: 0 5px 10px 0px #00000063;
+}
+
+#nolink:hover .tooltiptext {
+    visibility: visible;
+}
+
+#nolink:focus-visible .tooltiptext {
+    visibility: visible;
+}
+
 @media (max-width: 1279px) {
     .st-bar-btn-main-expand {
         display: none;
@@ -1070,6 +1062,12 @@ audio::-webkit-media-controls-enclosure{
         width: 100%;
         height: 100%;
         animation: 0.1s index ease-in-out;
+    }
+    .tooltiptext {
+        width: 100%;
+        top: -400%;
+        margin-left: -86px;
+        box-shadow: 0 5px 10px 0px #00000063;
     }
     @keyframes index {
         0% {scale: 0.95; opacity: 0.8;}
@@ -1182,11 +1180,6 @@ audio::-webkit-media-controls-enclosure{
         width: 80px;
         height: 80px;
     }
-    .notification {
-        width: auto;
-        align-items: center;
-        flex-direction: row;
-    }
     .cnt-lnk {
         transform: translateX(0);
     }
@@ -1197,7 +1190,19 @@ audio::-webkit-media-controls-enclosure{
         margin: 0 12px;
         grid-template-columns: repeat(1, minmax(auto, 1fr));
     }
-    .youtube-last-video {
-        padding: 0;
+    .notification {
+        width: auto;
+        align-items: center;
+        flex-direction: row;
+    }
+    .noti-logo {
+        margin: 5px;
+        text-align: center;
+        width: 32px;
+        height: 32px;
+    }
+    .noti-txt-main {
+        margin: 5px;
+        font-weight: normal;
     }
 }

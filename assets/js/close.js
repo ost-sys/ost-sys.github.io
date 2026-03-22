@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 200);
         
         if (appTaskbarBtn) {
-            appTaskbarBtn.classList.remove('active', 'opened'); // Убираем выделение в таскбаре
+            appTaskbarBtn.classList.remove('active', 'opened');
         }
         
         if (navbar) navbar.style.bottom = "0";
