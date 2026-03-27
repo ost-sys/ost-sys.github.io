@@ -52,7 +52,7 @@
             </div>
             <div class="st-br-item-2">
                 <button class="st-bar-btn-main-hide"></button>
-                <button class="st-bar-btn-main-expand" id="expand" onclick="toggleSize()"></button>
+                <button class="st-bar-btn-main-expand" id="expand"></button>
                 <button class="st-bar-btn-main-close"></button>
             </div>
         </div>
@@ -62,7 +62,7 @@
             </li>
             <div class="lnk-cnt">
                 <input type="text" placeholder="Um... For what?" value='<a href="https://ost-sys.github.io"><img src="https://ost-sys.github.io/assets/images/ost.png" alt="OST"/></a>' id="myInput">
-                <button class="btn-cp" onclick="myFunction()"></button>
+                <button class="btn-cp" onclick="copyLinkFunction()"></button>
             </div>
             <li>
                 <a id="btnChangelog"><div class="current" id="changelog" style="display: none;"></div><span class="nav-list"><span class="nav-icon"></span><span class="nav-text">Список изменений</span></span></a>
@@ -92,6 +92,24 @@
             <h1 class="main-txt">Список изменений</h1>
             <div class="container">
                 <span class="info-txt">Вся информация о новых функциях на сайте будет отображаться здесь</span>
+                <h2 class="just-txt">Версия 4.0.2</h2>
+                <table>
+                    <tr>
+                        <td>1</td><td class="table-info">Версия и Copyright перемещены в правый нижний угол</td>
+                    </tr>
+                    <tr>
+                        <td>2</td><td class="table-info">Добавлена дата</td>
+                    </tr>
+                    <tr>
+                        <td>3</td><td class="table-info">Добавлены скрипты в "Ключи активации"</td>
+                    </tr>
+                    <tr>
+                        <td>4</td><td class="table-info">Полноэкранный меню "Пуск" для мобильных устройств</td>
+                    </tr>
+                    <tr>
+                        <td>5</td><td class="table-info">Устранил ошибки в логах</td>
+                    </tr>
+                </table>
 		        <h2 class="just-txt">Версия 4.0.1</h2>
                 <table>
                     <tr>
@@ -314,7 +332,13 @@
                     <div class="cnt-lnk" onclick="document.location='https://getsharex.com/'">
                         <div class="cnt-txt">
                             <span class="cnt-main-txt">ShareX</span>
-                            <span class="cnt-info-txt">Бесплатная программа для скриншотов</span>
+                            <span class="cnt-info-txt">Бесплатная программа для красивых скриншотов</span>
+                        </div>
+                    </div>
+                    <div class="cnt-lnk" onclick="document.location='https://www.startallback.com/'">
+                        <div class="cnt-txt">
+                            <span class="cnt-main-txt">StartAllBack</span>
+                            <span class="cnt-info-txt">Программа для возвращения старого меню Пуск</span>
                         </div>
                     </div>
                 </div>
@@ -324,7 +348,7 @@
         <div class="main-zn" id="keysMain" style="display: none;">
             <h1 class="main-txt">Ключи активации</h1>
             <div class="container">
-                <span class="info-txt">Ключи активации для Windows, начиная с 7 и заканчивая 11 можно найти здесь</span>
+                <span class="info-txt">Ключи активации для Windows, начиная с Windows 7 и заканчивая Windows 11, хрянятся в этом разделе</span>
                 <h2>Windows 7</h2>
                 <table>
                     <tr>
@@ -400,15 +424,36 @@
                 <h2 class="just-txt">Команды</h2>
                 <table>
                     <tr>
-                        <td>Команда №1</td><td class="table-info">slmgr /ipk [ваш-ключ-без-скобок]</td>
+                        <td>1</td><td class="table-info">slmgr /ipk ваш-ключ-здесь</td>
                     </tr>
                     <tr>
-                        <td>Команда №2</td><td class="table-info">slmgr /skms kms.digiboy.ir</td>
+                        <td>2</td><td class="table-info">slmgr /skms kms.digiboy.ir</td>
                     </tr>
                     <tr>
-                        <td>Команда №3</td><td class="table-info">slmgr /ato</td>
+                        <td>3</td><td class="table-info">slmgr /ato</td>
                     </tr>
                 </table>
+                <h2 class="just-txt">Полезный скрипт для активации Windows и Office</h2>
+                <div class="info-txt">Для Windows 8.1 - 11</div>
+                <code-cnt>
+                    <input
+                        placeholder="WHY YOU DELETED CODE BRUH?"
+                        class="code"
+                        id="code1"
+                        value="irm https://get.activated.win | iex"/>
+                    <button class="btn-cp" onclick="copyCodeFunction1()"></button>
+                </code-cnt>
+                <div class="info-txt">Если указанный выше ресурс заблокирован (провайдером/DNS), попробуйте следующее (требуется обновление Windows 10 или 11).</div>
+                <code-cnt>
+                    <input
+                        placeholder="WHY YOU DELETED CODE BRUH?"
+                        class="code"
+                        id="code2"
+                        value="iex (curl.exe -s --doh-url https://1.1.1.1/dns-query https://get.activated.win | Out-String)"/>
+                    <button class="btn-cp" onclick="copyCodeFunction2()"></button>
+                </code-cnt>
+                <div class="info-txt">Все операции делаются в PowerShell</div>
+
             </div>
             <div class="lnk-zn">
                 <span class="lnk-info">Ссылки</span>
@@ -429,7 +474,7 @@
                         <td>Псевдоним</td><td class="table-info">Operating System Tester</td>
                     </tr>
                     <tr>
-                        <td>Возраст</td><td class="table-info">18 лет</td>
+                        <td>Возраст</td><td class="table-info" id="age"></td>
                     </tr>
                     <tr>
                         <td>Живёт в</td><td class="table-info">Россия, Дагестан</td>
@@ -453,17 +498,11 @@
                         <td>Видеокарта</td><td class="table-info">ASUS Strix GeForce GTX 1070</td>
                     </tr>
                     <tr>
-                        <th rowspan="3">Хранилище</th>
+                        <th rowspan="2">Хранилище</th>
                         <td class="table-info">HDD 1 TB</td>
                     </tr>
                     <tr>
                         <td class="table-info">NVME M.2 Hynix 256 GB</td>
-                    </tr>
-                    <tr>
-                        <td class="table-info">SATA SSD Kingston 240 GB</td>
-                    </tr>
-                    <tr>
-                        <td class="table-info"></td>
                     </tr>
                     <tr>
                         <td>Материнская плата</td><td class="table-info">ASUS Prime B760-PLUS</td>
@@ -493,21 +532,24 @@
                 <h2 class="just-txt">Программы для тестирования</h2>
                 <table>
                     <tr>
-                        <th rowspan="2">Виртуальные машины</th>
-                        <td class="table-info">VMware Workstation Pro</td>
+                        <th rowspan="3">Виртуальные машины</th>
+                        <td class="table-info">VMware Workstation Pro (Windows)</td>
                     </tr>
                     <tr>
-                        <td class="table-info">Parallels Desktop</td>
+                        <td class="table-info">Parallels Desktop (macOS)</td>
+                    </tr>
+                    <tr>
+                        <td class="table-info">UTM (macOS)</td>
                     </tr>
                     <tr>
                         <th rowspan="2">Программа для монтажа</th>
-                        <td class="table-info">Sony Vegas Pro</td>
+                        <td class="table-info">Sony Vegas Pro (Windows)</td>
                     </tr>
                     <tr>
-                        <td class="table-info">Adobe Premiere Pro</td>
+                        <td class="table-info">Adobe Premiere Pro (macOS)</td>
                     </tr>
                     <tr>
-                        <td>Программа для записи</td><td class="table-info">OBS (from Steam)</td>
+                        <td>Программа для записи</td><td class="table-info">OBS</td>
                     </tr>
                     <tr>
                         <td>Превью</td><td class="table-info">Adobe Photoshop</td>
@@ -553,9 +595,6 @@
                 <a href="https://www.donationalerts.com/r/ost_5566" class="lnk">Donation Alerts</a>
                 <a href="https://new.donatepay.ru/@ost" class="lnk">Donate Pay</a>
             </div>
-            <div>
-                <script src="assets/js/year.js"></script>
-            </div>
         </div>
     </main>
     <div class="warning" id="warning">
@@ -579,9 +618,10 @@
                 <img src="assets/images/friends/kernel64.jpeg">
             </div>
         </div>
-        <div>
+        <div class="time">
+            <span id="clock"></span>
+            <span id="date"></span>
             <script src="assets/js/clock.js"></script>
-            <span id="clock" class="time"></span>
         </div>
         <script src="assets/js/close.js"></script>
         <script src="assets/js/startmenu.js"></script>

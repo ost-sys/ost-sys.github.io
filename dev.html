@@ -3,20 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/images/icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/66862161?v=4" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/light.css" media="(prefers-color-scheme: light)">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark.css" media="(prefers-color-scheme: dark)">
     <script src="assets/js/btn-cp.js"></script>
-    <script src="assets/js/nav.js"></script>
-    <script src="assets/js/expand.js"></script>
     <title>Разработка - OST</title>
 </head>
 <body>
     <script src="assets/js/os.js"></script>
     <div class="restore-btn">
-        <div class="app-icn"><img src="assets/images/icon.ico" alt=""></div>
-        <span class="app-txt">OST Web</span>
+        <div class="app-icn"><img src="https://avatars.githubusercontent.com/u/66862161?v=4" alt=""></div>
+        <span class="app-txt">OST</span>
+    </div>
+    <div class="win-start-menu" id="startmenu">
+        <h4 class="start-menu-big-txt">Ссылки</h4>
+        <div class="uwp-sector">
+            <div class="uwp-button" onclick="document.location='https://www.youtube.com/@OS-Tester'">
+                <img src="assets/images/icons/YouTube.svg" width="40">
+                <span class="uwp-button-txt">YouTube</span>
+            </div>
+            <div class="uwp-button" onclick="document.location='https://t.me/ostester_channel'">
+                <img src="assets/images/icons/Telegram.svg" width="40" height="40">
+                <span class="uwp-button-txt">Telegram</span>
+            </div>
+            <div class="uwp-button" onclick="document.location='https://github.com/ost-sys'">
+                <img src="assets/images/icons/Github.svg" width="40" height="40">
+                <span class="uwp-button-txt">Github</span>
+            </div>
+            <div class="uwp-button" onclick="document.location='https://www.donationalerts.com/r/ost_5566'">
+                <img src="assets/images/icons/DA.svg" width="40">
+                <span class="uwp-button-txt">Donation Alerts</span>
+            </div>
+            <div class="uwp-button" onclick="document.location='https://github.com/ost-sys/ost-program-android/releases/'">
+                <img src="https://raw.githubusercontent.com/ost-sys/ost-program-android/refs/heads/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" width="40">
+                <span class="uwp-button-txt">OST Tools</span>
+            </div>
+        </div>
     </div>
     <main>
         <div class="st-br">
@@ -103,7 +126,7 @@
                         <td>Используемая толщина шрифта</td><td class="table-info">100, normal, bold</td>
                     </tr>
                     <tr>
-                        <td>Иконки</td><td class="table-info"><a href="https://learn.microsoft.com/ru-ru/windows/apps/design/style/segoe-ui-symbol-font" style="font-weight: normal;">Segoe MDL2</a></td>
+                        <td>Иконки</td><td class="table-info"><a href="https://learn.microsoft.com/ru-ru/windows/apps/design/style/segoe-fluent-icons-font" style="font-weight: normal;">Segoe Fluent Icons</a></td>
                     </tr>
                     <tr>
                         <td>Утилита для получения иконок</td><td class="table-info">Таблица символов</td>
@@ -133,15 +156,23 @@
         </div>
     </main>
     <footer>
-        <div class="taskbar-icn active">
-            <img src="assets/images/icon.ico">
+        <div class="footer-icn">
+            <div class="start-menu" id="startmenuicn"></div>
+            <div class="taskbar-icn active">
+                <img src="https://avatars.githubusercontent.com/u/66862161?v=4">
+            </div>
         </div>
-        <div>
-            <script src="assets/js/clock.js"></script>
-            <span id="clock" class="time"></span>
+        <div class="system-icons">
+            <div class="time">
+                <span id="clock"></span>
+                <span id="date"></span>
+                <script src="assets/js/clock.js"></script>
+            </div>
         </div>
         <script src="assets/js/close.js"></script>
+        <script src="assets/js/startmenu.js"></script>
         <script src="assets/js/btn-anim.js"></script>
+        <script src="assets/js/warning-other.js"></script>
     </footer>
 </body>
 </html>

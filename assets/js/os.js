@@ -12,7 +12,7 @@ var userDeviceArray = [
     {device: 'Windows 8', platform: /Windows NT 6.2/},
     {device: 'Windows 8.1', platform: /Windows NT 6.3/},
     {device: 'Windows 10/11', platform: /Windows NT 10.0/},
-    {device: 'Macintosh', platform: /Macintosh/}
+    {device: 'macOS', platform: /Macintosh/}
 ];
 
 var platform = navigator.userAgent;
@@ -25,4 +25,6 @@ function getPlatform() {
     }
     return 'Неизвестная платформа!' + platform;
 }
-document.write('<span class="fixed-ver">' + getPlatform() + '</span>');
+document.write('<span class="fixed-ver">Ваша операционная система - ' 
+    + getPlatform() + 
+    '<br> Powered by OST <br> Copyright © OST, 2022 - ' + new Date().getFullYear() + '</span>');
