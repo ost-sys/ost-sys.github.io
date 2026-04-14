@@ -21,5 +21,8 @@ function getAge() {
     
     return age;
 }
-
-document.getElementById("age").innerHTML = getAge() + " лет";
+try {
+    document.getElementById("age").innerHTML = getAge() + " лет";
+} catch (TypeError) {
+    console.log("Object with id 'age' not found");
+}

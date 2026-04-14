@@ -7,8 +7,14 @@
     <link rel="stylesheet" href="assets/css/light.css" media="(prefers-color-scheme: light)">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark.css" media="(prefers-color-scheme: dark)">
+    <script src="assets/js/one_page.js"></script>
     <script src="assets/js/btn-cp.js"></script>
+    <script src="assets/js/changelog.js"></script>
     <script src="assets/js/nav.js"></script>
+    <script src="assets/js/close.js"></script>
+    <script src="assets/js/taskbar.js"></script>
+    <script src="assets/js/warning.js"></script>
+    <script src="assets/js/curConverter.js"></script>
     <title>OST</title>
 </head>
 <body>
@@ -16,6 +22,13 @@
     <div class="restore-btn">
         <div class="app-icn"><img src="https://avatars.githubusercontent.com/u/66862161?v=4" alt=""></div>
         <span class="app-txt">OST</span>
+    </div>
+    <div class="notification-center" id="notificationCenter">
+        <div class="notification-title">
+            <span class="notification-icon"></span>
+            Список изменений
+        </div>
+        <div id="changelog-container" class="notification-content"></div>
     </div>
     <div class="win-start-menu" id="startmenu">
         <h4 class="start-menu-big-txt">Ссылки</h4>
@@ -65,231 +78,69 @@
                 <button class="btn-cp" onclick="copyLinkFunction()"></button>
             </div>
             <li>
-                <a id="btnChangelog"><div class="current" id="changelog" style="display: none;"></div><span class="nav-list"><span class="nav-icon"></span><span class="nav-text">Список изменений</span></span></a>
+                <a id="btnCurConverter">
+                    <div class="current" id="curConverter" style="display: none;"></div>
+                    <span class="nav-list">
+                        <span class="nav-icon"></span>
+                        <span class="nav-text">Конвертер валют</span>
+                    </span>
+                </a>
             </li>
             <li>
-                <a id="btnThemes"><div class="current" id="themes" style="display: none;"></div><span class="nav-list"><span class="nav-icon"></span><span class="nav-text">Кастомизация</span></span></a>
+                <a id="btnThemes">
+                    <div class="current" id="themes" style="display: none;"></div>
+                    <span class="nav-list">
+                        <span class="nav-icon"></span>
+                        <span class="nav-text">Кастомизация</span>
+                    </span>
+                </a>
             </li>
             <li>
-                <a id="btnKeys"><div class="current" id="keys" style="display: none;"></div><span class="nav-list"><span class="nav-icon"></span><span class="nav-text">Ключи активации</span></span></a>
+                <a id="btnKeys">
+                    <div class="current" id="keys" style="display: none;"></div>
+                    <span class="nav-list">
+                        <span class="nav-icon"></span>
+                        <span class="nav-text">Ключи активации</span>
+                    </span>
+                </a>
             </li>
             <li>
-                <a id="btnAbout"><div class="current" id="about" style="display: none;"></div><span class="nav-list"><span class="nav-icon"></span><span class="nav-text">Информация</span></span></a>
+                <a id="btnAbout">
+                    <div class="current" id="about" style="display: none;"></div>
+                    <span class="nav-list">
+                        <span class="nav-icon"></span>
+                        <span class="nav-text">Информация</span>
+                    </span>
+                </a>
             </li>
             <li>
-                <a href="dev.html"><span class="nav-list"><span class="nav-icon"></span><span class="nav-text">Разработка</span></span></a>
+                <a href="dev.html">
+                    <span class="nav-list">
+                        <span class="nav-icon"></span>
+                        <span class="nav-text">Разработка</span>
+                    </span>
+                </a>
             </li>
         </div>
 
         <div class="main-zn" id="welcome">
-            <h1 class="main-txt">Обновление!</h1>
+            <h1 class="main-txt">Я хз как ты тут оказался</h1>
             <div class="container">
-                <span class="info-txt">Теперь большая часть сайта распололжена на 1 странице! Выбери то, что нужно в списке слева!</span>
+                <span class="info-txt">Но все элементы доступны через меню слева, нажми на них и можешь увидеть контент</span>
             </div>
         </div>
         
-        <div class="main-zn" id="changelogMain" style="display: none;">
-            <h1 class="main-txt">Список изменений</h1>
+        <div class="main-zn" id="curConverterMain" style="display: none;">
+            <h1 class="main-txt">Конвертер валют</h1>
             <div class="container">
-                <span class="info-txt">Вся информация о новых функциях на сайте будет отображаться здесь</span>
-                <h2 class="just-txt">Версия 4.0.2</h2>
-                <table>
-                    <tr>
-                        <td>1</td><td class="table-info">Версия и Copyright перемещены в правый нижний угол</td>
-                    </tr>
-                    <tr>
-                        <td>2</td><td class="table-info">Добавлена дата</td>
-                    </tr>
-                    <tr>
-                        <td>3</td><td class="table-info">Добавлены скрипты в "Ключи активации"</td>
-                    </tr>
-                    <tr>
-                        <td>4</td><td class="table-info">Полноэкранный меню "Пуск" для мобильных устройств</td>
-                    </tr>
-                    <tr>
-                        <td>5</td><td class="table-info">Устранил ошибки в логах</td>
-                    </tr>
-                </table>
-		        <h2 class="just-txt">Версия 4.0.1</h2>
-                <table>
-                    <tr>
-                        <td>1</td><td class="table-info">Баг-фиксы</td>
-                    </tr>
-                </table>
-		        <h2 class="just-txt">Версия 4.0.0 (Reborn)</h2>
-                <table>
-                    <tr>
-                        <td>1</td><td class="table-info">Сайт вернулся после долгого перерыва</td>
-                    </tr>
-                    <tr>
-                        <td>2</td><td class="table-info">Исправил логики всех элементов</td>
-                    </tr>
-                    <tr>
-                        <td>3</td><td class="table-info">Обновлена информация в "Информация"</td>
-                    </tr>
-                    <tr>
-                        <td>4</td><td class="table-info">Новые обои</td>
-                    </tr>
-                    <tr>
-                        <td>5</td><td class="table-info">Удалено много разделов. На их смену придут полезные функции, взятые с Android приложения</td>
-                    </tr>
-                </table>
-		        <h2 class="just-txt">Версия 3.0.2</h2>
-                <table>
-                    <tr>
-                        <td>1</td><td class="table-info">Мелочные изменения</td>
-                    </tr>
-                </table>
-                <h2 class="just-txt">Версия 3.0.1</h2>
-                <table>
-                    <tr>
-                        <td>1</td><td class="table-info">Обновлена информация в "Информация"</td>
-                    </tr>
-                    <tr>
-                        <td>2</td><td class="table-info">Исправления багов</td>
-                    </tr>
-                </table>
-                <h2 class="just-txt">Версия 3.0.0</h2>
-                <table>
-                    <tr>
-                        <td>1</td><td class="table-info">Добавлено меню "Пуск", которое содержит в себе ссылки на мои соц. сети</td>
-                    </tr>
-                    <tr>
-                        <td>2</td><td class="table-info">Страницы находятся в 1-ом HTML файле</td>
-                    </tr>
-                    <tr>
-                        <td>3</td><td class="table-info">Добавлен баннер с последним видео на главной странице</td>
-                    </tr>
-                    <tr>
-                        <td>4</td><td class="table-info">Добавлена станция ErtorWorldTheStationFM</td>
-                    </tr>
-                    <tr>
-                        <td>5</td><td class="table-info">Улучшены анимации</td>
-                    </tr>
-                    <tr>
-                        <td>6</td><td class="table-info">Новые обои</td>
-                    </tr>
-                    <tr>
-                        <td>7</td><td class="table-info">Окно "Оповещение" при нажатии на пользователя, у которого был сайт/канал</td>
-                    </tr>
-                    <tr>
-                        <td>8</td><td class="table-info">На панели задач больше иконок (Ярлыки друзей)</td>
-                    </tr>
-                </table>
-                <h2 class="just-txt">Версия 2.1.2</h2>
-                <table>
-                    <tr>
-                        <td>1</td><td class="table-info">Обновлены значки. Теперь они в стиле Windows 11</td>
-                    </tr>
-                    <tr>
-                        <td>2</td><td class="table-info">Исправлены ошибки в дизайне и в коде</td>
-                    </tr>
-                </table>
-                <h2 class="just-txt">Версия 2.1.1</h2>
-                <table>
-                    <tr>
-                        <td>1</td><td class="table-info">Улучшена прозрачность</td>
-                    </tr>
-                    <tr>
-                        <td>2</td><td class="table-info">Автоскрытие панели задач при открытии главного окна</td>
-                    </tr>
-                    <tr>
-                        <td>3</td><td class="table-info">Мелкие изменения</td>
-                    </tr>
-                </table>
-                <h2 class="just-txt">Версия 2.1.0</h2>
-                <table>
-                    <tr>
-                        <td>1</td><td class="table-info">Новый раздел "Разработка"</td>
-                    </tr>
-                    <tr>
-                        <td>2</td><td class="table-info">Анимация волны при нажатии на некоторые элементы сайта</td>
-                    </tr>
-                    <tr>
-                        <td>3</td><td class="table-info">Новые обои</td>
-                    </tr>
-                    <tr>
-                        <td>4</td><td class="table-info">Мелкие исправления</td>
-                    </tr>
-                </table>
-                <h2 class="just-txt">Версия 2.0.1</h2>
-                <table>
-                    <tr>
-                        <td>1</td><td class="table-info">Убран символ "№" с списка изменений</td>
-                    </tr>
-                    <tr>
-                        <td>2</td><td class="table-info">Исправлен баг в разделе "Кастомизация"</td>
-                    </tr>
-                    <tr>
-                        <td>3</td><td class="table-info">Исправлен баг в мобильной версии сайта</td>
-                    </tr>
-                </table>
-                <h2 class="just-txt">Версия 2.0.0</h2>
-                <table>
-                    <tr>
-                        <td>1</td><td class="table-info">Добавлена панель задач</td>
-                    </tr>
-                    <tr>
-                        <td>2</td><td class="table-info">Добавлена иконка на главный экран</td>
-                    </tr>
-                    <tr>
-                        <td>3</td><td class="table-info">Добалена функция "Закрыть окно"</td>
-                    </tr>
-                    <tr>
-                        <td>4</td><td class="table-info">Добалена функция "Развернуть окно"</td>
-                    </tr>
-                    <tr>
-                        <td>5</td><td class="table-info">Добалена функция "Свернуть окно"</td>
-                    </tr>
-                    <tr>
-                        <td>6</td><td class="table-info">Изменён дизайн главной страницы в стиле современных версий</td>
-                    </tr>
-                    <tr>
-                        <td>7</td><td class="table-info">Самую малость изменён цвет в панели навигации при наведении</td>
-                    </tr>
-                    <tr>
-                        <td>8</td><td class="table-info">Выделение текста отключено</td>
-                    </tr>
-                </table>
-                <h2 class="just-txt">Версия 1.3.0</h2>
-                <table>
-                    <tr>
-                        <td>1</td><td class="table-info">Переделана главная страница сайта</td>
-                    </tr>
-                    <tr>
-                        <td>2</td><td class="table-info">Ссылки друзей перемещены в раздел "Друзья"</td>
-                    </tr>
-                </table>
-                <h2 class="just-txt">Версия 1.2.0</h2>
-                <table>
-                    <tr>
-                        <td>1</td><td class="table-info">Добавлена адаптивная версия сайта</td>
-                    </tr>
-                    <tr>
-                        <td>2</td><td class="table-info">Мелкие исправления</td>
-                    </tr>
-                </table>
-                <h2 class="just-txt">Версия 1.1.0</h2>
-                <table>
-                    <tr>
-                        <td>1</td><td class="table-info">Добавлен поле с ссылкой на сайт</td>
-                    </tr>
-                    <tr>
-                        <td>2</td><td class="table-info">Добавлена ссылка для копирования ссылки</td>
-                    </tr>
-                    <tr>
-                        <td>3</td><td class="table-info">Добавлены ссылки на донат</td>
-                    </tr>
-                    <tr>
-                        <td>4</td><td class="table-info">Мелкие исправления</td>
-                    </tr>
-                </table>
-                <h2 class="just-txt">Версия 1.0.0</h2>
-                <table>
-                    <tr>
-                        <td>1</td><td class="table-info">Начальная версия</td>
-                    </tr>
-                </table>
+                <span class="info-txt">Конвертер на основе текущих курсов</span>
+                <h3>Выберите валюту, с которой переводим</h3>
+                <select id="fromCurrency"></select>
+                <h3>Выберите валюту, в которую переводим</h3>
+                <select id="toCurrency"></select>
+                <h3>Введите сумму</h3>
+                <input type="number" id="amount" placeholder="Сумма" value="1">
+                <button>Конвертировать</button>
             </div>
         </div>
 
@@ -438,7 +289,6 @@
                 <code-cnt>
                     <input
                         placeholder="WHY YOU DELETED CODE BRUH?"
-                        class="code"
                         id="code1"
                         value="irm https://get.activated.win | iex"/>
                     <button class="btn-cp" onclick="copyCodeFunction1()"></button>
@@ -447,7 +297,6 @@
                 <code-cnt>
                     <input
                         placeholder="WHY YOU DELETED CODE BRUH?"
-                        class="code"
                         id="code2"
                         value="iex (curl.exe -s --doh-url https://1.1.1.1/dns-query https://get.activated.win | Out-String)"/>
                     <button class="btn-cp" onclick="copyCodeFunction2()"></button>
@@ -475,9 +324,6 @@
                     </tr>
                     <tr>
                         <td>Возраст</td><td class="table-info" id="age"></td>
-                    </tr>
-                    <tr>
-                        <td>Живёт в</td><td class="table-info">Россия, Дагестан</td>
                     </tr>
                     <tr>
                         <td>День рождения</td><td class="table-info">16 сентября 2007 года</td>
@@ -508,13 +354,10 @@
                         <td>Материнская плата</td><td class="table-info">ASUS Prime B760-PLUS</td>
                     </tr>
                 </table>
-                <h2 class="just-txt">Ноутбук</h2>
+                <h2 class="just-txt">MacBook Air</h2>
                 <table>
                     <tr>
-                        <td>Название</td><td class="table-info">MacBook Air M4 13,6-inches</td>
-                    </tr>
-                    <tr>
-                        <td>Процессор</td><td class="table-info">Apple M4 (8 ядер CPU, 10 ядер GPU)</td>
+                        <td>Процессор</td><td class="table-info">Apple M4 (10 ядер CPU, 8 ядер GPU)</td>
                     </tr>
                     <tr>
                         <td>ОЗУ</td><td class="table-info">16 GB LPDDR5</td>
@@ -617,17 +460,21 @@
             <div class="taskbar-icn" onclick="document.location='https://kernel86-64.github.io'">
                 <img src="assets/images/friends/kernel64.jpeg">
             </div>
+            <div class="taskbar-icn" onclick="document.location='https://alotya.xyz'">
+                <img src="https://alotya.xyz/img/icon/icon.png">
+            </div>
         </div>
-        <div class="time">
-            <span id="clock"></span>
-            <span id="date"></span>
-            <script src="assets/js/clock.js"></script>
+        <div class="system-icons">
+            <div class="time">
+                <span id="clock"></span>
+                <span id="date"></span>
+                <script src="assets/js/clock.js"></script>
+            </div>
+            <div class="notification-icn">
+                <span class="noti-icn"></span>
+            </div>
         </div>
-        <script src="assets/js/close.js"></script>
-        <script src="assets/js/startmenu.js"></script>
         <script src="assets/js/btn-anim.js"></script>
-        <script src="assets/js/one_page.js"></script>
-        <script src="assets/js/warning.js"></script>
     </footer>
 </body>
 </html>

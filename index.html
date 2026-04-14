@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="OST">
-    <meta name="description" content="Test desc">
+    <meta name="description" content="The official website of OST (Operating System Tester)">
     <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/66862161?v=4" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/light.css" media="(prefers-color-scheme: light)">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark.css" media="(prefers-color-scheme: dark)">
     <script src="assets/js/btn-cp.js"></script>
+    <script src="assets/js/changelog.js"></script>
+    <script src="assets/js/close.js"></script>
+    <script src="assets/js/taskbar.js"></script>
     <title>Главная - OST</title>
 </head>
 <body>
@@ -17,6 +20,13 @@
     <div class="restore-btn">
         <div class="app-icn"><img src="https://avatars.githubusercontent.com/u/66862161?v=4" alt=""></div>
         <span class="app-txt">OST</span>
+    </div>
+    <div class="notification-center" id="notificationCenter">
+        <div class="notification-title">
+            <span class="notification-icon"></span>
+            Список изменений
+        </div>
+        <div id="changelog-container" class="notification-content"></div>
     </div>
     <div class="win-start-menu" id="startmenu">
         <h4 class="start-menu-big-txt">Ссылки</h4>
@@ -78,15 +88,15 @@
                 <button class="btn-cp" onclick="copyLinkFunction()"></button>
             </div>
             <div class="pillars-cnt" id="cnt">
-                <div class="cnt-index" onclick="document.location='onepage.html#changelog'">
+                <div class="cnt-index" onclick="document.location='onepage.html#curConverter'">
                     <div class="cnt-index-hvr">
                         <div class="cnt-index-icn">
-                            <span class="icn"></span>
+                            <span class="icn"></span>
                         </div>
                         <div class="cnt-index-txt">
-                            <span class="txt">Список изменений</span>
+                            <span class="txt">Конвертер валют</span>
                             <br>
-                            <span class="txt-info">Список изменений на сайта</span>
+                            <span class="txt-info">Конвертер валют</span>
                         </div>
                     </div>
                 </div>
@@ -110,7 +120,7 @@
                         <div class="cnt-index-txt">
                             <span class="txt">Ключи активации</span>
                             <br>
-                            <span class="txt-info">Ключи активации от Win 7 до Win 11</span>
+                            <span class="txt-info">Ключи активации<br>(Windows 7 - Windows 11)</span>
                         </div>
                     </div>
                 </div>
@@ -159,6 +169,9 @@
             <div class="taskbar-icn" onclick="document.location='https://kernel86-64.github.io'">
                 <img src="assets/images/friends/kernel64.jpeg">
             </div>
+            <div class="taskbar-icn" onclick="document.location='https://alotya.xyz'">
+                <img src="https://alotya.xyz/img/icon/icon.png">
+            </div>
         </div>
         <div class="system-icons">
             <div class="time">
@@ -166,11 +179,11 @@
                 <span id="date"></span>
                 <script src="assets/js/clock.js"></script>
             </div>
+            <div class="notification-icn">
+                <span class="noti-icn"></span>
+            </div>
         </div>
-        <script src="assets/js/close.js"></script>
-        <script src="assets/js/startmenu.js"></script>
         <script src="assets/js/btn-anim.js"></script>
-        <script src="assets/js/warning-other.js"></script>
     </footer>
 </body>
 </html>

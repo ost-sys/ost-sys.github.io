@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark.css" media="(prefers-color-scheme: dark)">
     <script src="assets/js/btn-cp.js"></script>
+    <script src="assets/js/changelog.js"></script>
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/close.js"></script>
+    <script src="assets/js/taskbar.js"></script>
     <title>Разработка - OST</title>
 </head>
 <body>
@@ -15,6 +19,13 @@
     <div class="restore-btn">
         <div class="app-icn"><img src="https://avatars.githubusercontent.com/u/66862161?v=4" alt=""></div>
         <span class="app-txt">OST</span>
+    </div>
+    <div class="notification-center" id="notificationCenter">
+        <div class="notification-title">
+            <span class="notification-icon"></span>
+            Список изменений
+        </div>
+        <div id="changelog-container" class="notification-content"></div>
     </div>
     <div class="win-start-menu" id="startmenu">
         <h4 class="start-menu-big-txt">Ссылки</h4>
@@ -155,7 +166,7 @@
             </div>
         </div>
     </main>
-    <footer>
+     <footer>
         <div class="footer-icn">
             <div class="start-menu" id="startmenuicn"></div>
             <div class="taskbar-icn active">
@@ -168,11 +179,11 @@
                 <span id="date"></span>
                 <script src="assets/js/clock.js"></script>
             </div>
+            <div class="notification-icn">
+                <span class="noti-icn"></span>
+            </div>
         </div>
-        <script src="assets/js/close.js"></script>
-        <script src="assets/js/startmenu.js"></script>
         <script src="assets/js/btn-anim.js"></script>
-        <script src="assets/js/warning-other.js"></script>
     </footer>
 </body>
 </html>

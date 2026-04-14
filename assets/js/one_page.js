@@ -1,15 +1,16 @@
-const welcome = document.getElementById('welcome');
 let currentActiveTabId = null;
 
 const tabs = [
-    { id: 'changelog', title: 'Список изменений - OST' },
-    { id: 'themes',    title: 'Кастомизация - OST' },
-    { id: 'keys',      title: 'Ключи активации - OST' },
-    { id: 'about',     title: 'Информация - OST' }
+    { id: 'curConverter', title: 'Конвертер валют - OST' },
+    { id: 'themes', title: 'Кастомизация - OST' },
+    { id: 'keys', title: 'Ключи активации - OST' },
+    { id: 'about', title: 'Информация - OST' }
 ];
 
 function switchTab(newTabId) {
     if (currentActiveTabId === newTabId) return;
+
+    const welcome = document.getElementById('welcome');
 
     if (welcome && welcome.style.display !== 'none') {
         welcome.style.display = 'none';
@@ -35,21 +36,21 @@ function switchTab(newTabId) {
     currentActiveTabId = newTabId;
 }
 
-tabs.forEach(tab => {
-    const capitalId = tab.id.charAt(0).toUpperCase() + tab.id.slice(1);
-    const btnId = 'btn' + capitalId;
-    const btn = document.getElementById(btnId);
-
-    if (btn) {
-        btn.addEventListener('click', function() {
-            switchTab(tab.id);
-        });
-    } else {
-        console.warn(`Button with ID ${btnId} not found`);
-    }
-});
-
 document.addEventListener('DOMContentLoaded', () => {
+    tabs.forEach(tab => {
+        const capitalId = tab.id.charAt(0).toUpperCase() + tab.id.slice(1);
+        const btnId = 'btn' + capitalId;
+        const btn = document.getElementById(btnId);
+
+        if (btn) {
+            btn.addEventListener('click', function() {
+                switchTab(tab.id);
+            });
+        } else {
+            console.warn(`Button with ID ${btnId} not found`);
+        }
+    });
+
     const hash = window.location.hash.substring(1); 
 
     if (hash) {

@@ -1,4 +1,4 @@
-const btns = document.querySelectorAll('.btn-default')
+const btns = document.querySelectorAll('button')
 const li = document.querySelectorAll('.flnt-zn li a')
 const uwpButton = document.querySelectorAll('.uwp-button')
 

@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const restoreBtn = document.querySelector('.restore-btn'); 
     
     const navbar = document.querySelector("footer");
-    // const model = document.querySelector(".fixed-ver");
     
     const appTaskbarBtn = document.querySelectorAll('.taskbar-icn')[0];
 
@@ -25,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         if (navbar) navbar.style.bottom = "0";
-        // if (model) model.style.top = "0";
     });
 
     closeBtn.addEventListener('click', () => {
@@ -41,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         if (navbar) navbar.style.bottom = "0";
-        // if (model) model.style.top = "0";
     });
 
     const restoreWindow = () => {
@@ -57,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         if (navbar) navbar.style.bottom = "-40px";
-        // if (model) model.style.top = "-40px";
     };
 
     if (restoreBtn) {

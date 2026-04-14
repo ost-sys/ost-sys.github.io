@@ -7,6 +7,7 @@
     --uwp-button-bg: #ffffff59;
     --uwp-button-bg-hover: #ffffff85;
     --color-text-1: black;
+    --color-text-2: #00000070;
     --btn-main-hover: #0000001e;
     --btn-main-press: #00000034;
     --list-hover: #00000022;
@@ -38,5 +39,6 @@
     --button-hover-border: #7a7a7a;
     --button-press: #999999;
     --button-disabled-txt: #7a7a7a;
+    --notification-card-bg: #f6f6f6D0;
     --wave: radial-gradient(#808080, #00000000);
 }

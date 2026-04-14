@@ -7,11 +7,15 @@
     src: url(../fonts/HOLOMDL2.TTF);
 }
 @font-face {
-    font-family: Segoe MDL2;
+    font-family: Segoe Fluent;
     src: url(../fonts/SEGFLUENT.ttf);
 }
+@font-face {
+    font-family: Segoe UI;
+    src: url(../fonts/segoeui.ttf);
+}
 * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Segoe UI, system-ui, -apple-system, BlinkMacSystemFont;
     font-weight: 100;
     user-select: none;
 }
@@ -338,10 +342,6 @@ main.window-maximized {
     z-index: 2;
     transition: 0.2s ease-in-out;
 }
-@keyframes other {
-    0% {scale: 0.98; opacity: 0.9;}
-    100% {scale: 1; opacity: 1;}
-}
 .info-txt {
     font-size: 18px;
 }
@@ -480,6 +480,8 @@ iframe {
     justify-content: center;
     transition: none;
     animation: none;
+    opacity: 1;
+    scale: 1;
 }
 .st-bar-btn-menu {
     display: none;
@@ -488,6 +490,9 @@ iframe {
     background-color: #0078D7;
     color: white;
     box-shadow: none;
+    opacity: 1;
+    scale: 1;
+    
 }
 .st-bar-btn-back:active {
     background-color: #3392df;
@@ -625,9 +630,9 @@ footer {
     display: flex;
     justify-content: center;
     width: 65px;
-    align-items: flex-end;
-    font-size: 11px;
-    align-content: center;
+    height: 100%;
+    align-items: center;
+    font-size: 11.5px;
     flex-direction: column;
 }
 .fixed-ver {
@@ -656,6 +661,7 @@ footer {
     justify-content: center;
 }
 input {
+    font-family: monospace;
     color: var(--textarea-text);
     font-weight: normal;
     font-size: 14px;
@@ -691,11 +697,17 @@ input:focus-visible {
     border: none;
     background-color: var(--textarea-bg);
     outline: 2px solid var(--textarea-brd);
+    transition: none;
+    opacity: 1;
+    scale: 1;
 }
 .btn-cp:hover {
     box-shadow: none;
     background-color: var(--textarea-bg-hover);
     outline: 2px solid var(--textarea-brd-hover);
+    transition: none;
+    opacity: 1;
+    scale: 1;
 }
 .btn-cp:active {
     opacity: 1;
@@ -703,6 +715,9 @@ input:focus-visible {
     color: var(--textarea-text-visible);
     background-color: var(--textarea-bg-visible);
     outline: 2px solid var(--textarea-brd-visible);
+    transition: none;
+    opacity: 1;
+    scale: 1;
 }
 .nav-btn {
     display: none;
@@ -842,29 +857,94 @@ input:focus-visible {
     display: flex;
     flex-direction: row;
     padding: 0 4px;
+    justify-content: center;
+    align-items: center;
 }
-.changelog {
-    margin: 50px 0 0 0;
+.notification-icn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
 }
-.changelog-sector {
-    background-color: var(--uwp-button-bg);
-    padding: 10px;
+.notification-icn:hover {
+    background-color: var(--taskbar-icn-hover);
+}
+.notification-icn:active {
+    background-color: var(--taskbar-icn-press);
+}
+.notification-icn.ready {
+    background-color: var(--taskbar-icn-active);
+}
+.noti-icn {
+    font-family: Segoe MDL2;
+    font-size: 16px;
     color: var(--color-text-1);
-    margin: 0 0 5px 0;
 }
-.changelog-info-main h3 {
-    margin: 0;
-    font-weight: 400;
+.notification-center {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: calc(400px - 32px);
+    height: calc(100% - 40px);
+    right: -500px;
+    bottom: 40px;
+    background-color: var(--fluent-bg);
+    border-left: 1px solid var(--window-border);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    box-shadow: 0 5px 15px 0px #00000075;
+    overflow-y: auto;
+    padding: 0 16px;
+    transition: 0.2s ease-out;
 }
-.changelog-list {
-    display: none;
-    transition: all 0.2s ease-in-out;
+.notification-center.opened {
+    animation: 0.2s notification ease-out;
+    right: 0;
 }
-.changelog-sector table {
-    font-size: 14px;
+.notification-content {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(auto, 1fr));
+    row-gap: 8px;
+    width: 100%;
+    height: 100%;
+}
+.notification-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 32px);
+    margin: 16px;
+    height: 40px;
+    font-size: 16px;
+    color: var(--color-text-1);
+    text-align: center;
+    font-weight: normal;
+}
+.notification-icon {
+    font-family: Segoe MDL2;
+    font-size: 16px;
+    margin: 0 8px;
+}
+.notification-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--notification-card-bg);
+    padding: 16px;
+    height: min-content;
+}
+.notification-card-title {
+    font-size: 20px;
+    color: var(--color-text-1);
+    margin: 6px 0 4px 0;
+    font-weight: bold;
+}
+.notification-card-summary {
+    color: var(--color-text-2);
+    font-size: 16px;
 }
 
-.btn-default {
+button {
     margin: 5px 0;
     padding: 7px 14px;
     border: none;
@@ -876,26 +956,56 @@ input:focus-visible {
     position: relative;
     overflow: hidden;
 }
-.btn-default:hover {
+button:hover {
     display: block;
     position: relative;
     overflow: hidden;
     box-shadow: inset 0 0 0 2px var(--button-hover-border);
 }
-.btn-default:active {
+button:active {
     box-shadow: none;
     background-color: var(--button-press);
     scale: 0.96;
     opacity: 0.9;
 }
-.btn-default:disabled {
+button:disabled {
     color: var(--button-disabled-txt);
     box-shadow: none;
 }
-.btn-default:disabled:active {
+button:disabled:active {
     background-color: var(--button);
     scale: 1;
     opacity: 1;
+}
+select {
+    font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--textarea-text);
+    font-weight: normal;
+    font-size: 14px;
+    height: 32px;
+    width: 250px;
+    display: block;
+    margin-bottom: 15px;
+    padding: 0 5px;
+    border-radius: 0;
+    border: none;
+    background-color: var(--textarea-bg);
+    outline: 2px solid var(--textarea-brd);
+    cursor: pointer;
+}
+select:hover {
+    background-color: var(--textarea-bg-hover);
+    outline: 2px solid var(--textarea-brd-hover);
+}
+select:focus-visible {
+    color: var(--textarea-text-visible);
+    background-color: var(--textarea-bg-visible);
+    outline: 2px solid var(--textarea-brd-visible);
+}
+select option {
+    background-color: var(--window-bg);
+    color: var(--color-text-1);
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 .wave {
     background-image: var(--wave);
@@ -1026,22 +1136,6 @@ code-cnt {
     margin: 10px 0;
 }
 
-.code {
-    color: var(--textarea-text);
-    font-weight: normal;
-    font-size: 14px;
-    height: 28px;
-    display: inline-flex;
-    align-items: center;
-    padding: 0 5px;
-    border-radius: none;
-    border: none;
-    background-color: var(--textarea-bg);
-    outline: 2px solid var(--textarea-brd);
-    font-family: 'Courier New', Courier, monospace;
-    user-select: text;
-}
-
 @media (max-width: 1279px) {
     .win-start-menu {
         width: 100%;
@@ -1142,15 +1236,28 @@ code-cnt {
         height: 100%;
         width: 48px;
         padding: 5px;
+        margin: 0;
+        transition: none;
+        box-shadow: none;
         justify-content: center;
+        scale: 1;
+        opacity: 1;
     }
     .st-bar-btn-menu:hover {
         background-color: #0078D7;
         color: white;
+        transition: none;
+        box-shadow: none;
+        scale: 1;
+        opacity: 1;
     }
     .st-bar-btn-menu:active {
         background-color: #3392df;
         color: white;
+        transition: none;
+        box-shadow: none;
+        scale: 1;
+        opacity: 1;
     }
     .pillars-frnd { 
         grid-template-columns: repeat(1, minmax(auto, 1fr));
@@ -1228,5 +1335,9 @@ code-cnt {
     .noti-txt-main {
         margin: 5px;
         font-weight: normal;
+    }
+    .notification-center {
+        width: calc(100% - 32px);
+        right: -100%;
     }
 }
