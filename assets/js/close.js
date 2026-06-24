@@ -4,10 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const hideBtn = document.querySelector('.st-bar-btn-main-hide');
     const expandBtn = document.querySelector('.st-bar-btn-main-expand');
     const restoreBtn = document.querySelector('.restore-btn'); 
-    
     const navbar = document.querySelector("footer");
     
     const appTaskbarBtn = document.querySelectorAll('.taskbar-icn')[0];
+
+    const isIndexPage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('.html') === false;
+
+    if (navbar && mainWindow && !mainWindow.classList.contains('window-minimized') && mainWindow.style.display !== "none") {
+        navbar.classList.add('taskbar-hidden');
+    }
 
     if (expandBtn) {
         expandBtn.addEventListener('click', () => {
@@ -15,45 +20,53 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    hideBtn.addEventListener('click', () => {
-        mainWindow.classList.add('window-minimized'); 
-        
-        if (appTaskbarBtn) {
-            appTaskbarBtn.classList.remove('active');
-            appTaskbarBtn.classList.add('opened');
-        }
-        
-        if (navbar) navbar.style.bottom = "0";
-    });
+    if (hideBtn) {
+        hideBtn.addEventListener('click', () => {
+            mainWindow.classList.remove('window-maximized', 'window-closed');
+            mainWindow.classList.add('window-minimized');
+            
+            if (appTaskbarBtn) {
+                appTaskbarBtn.classList.remove('active');
+                appTaskbarBtn.classList.add('opened');
+            }
+            if (navbar) navbar.classList.remove('taskbar-hidden');
+        });
+    }
 
-    closeBtn.addEventListener('click', () => {
-        mainWindow.classList.add('window-minimized');
-        mainWindow.classList.remove('window-maximized');
-        
-        setTimeout(() => {
-            mainWindow.style.display = "none";
-        }, 200);
-        
-        if (appTaskbarBtn) {
-            appTaskbarBtn.classList.remove('active', 'opened');
-        }
-        
-        if (navbar) navbar.style.bottom = "0";
-    });
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            mainWindow.classList.remove('window-maximized', 'window-minimized');
+            mainWindow.classList.add('window-closed');
+
+            setTimeout(() => {
+                mainWindow.style.display = "none";
+            }, 450);
+            
+            if (appTaskbarBtn) {
+                appTaskbarBtn.classList.remove('active', 'opened');
+            }
+            if (navbar) navbar.classList.remove('taskbar-hidden');
+        });
+    }
 
     const restoreWindow = () => {
-        mainWindow.style.display = "flex";
-        
-        requestAnimationFrame(() => {
-            mainWindow.classList.remove('window-minimized');
-        });
-        
-        if (appTaskbarBtn) {
-            appTaskbarBtn.classList.add('active');
-            appTaskbarBtn.classList.add('opened');
+        if (mainWindow.style.display === "none" || mainWindow.classList.contains('window-closed')) {
+            if (isIndexPage) {
+                mainWindow.style.display = "flex";
+                setTimeout(() => {
+                    mainWindow.classList.remove('window-closed', 'window-minimized');
+                }, 10);
+                if (appTaskbarBtn) appTaskbarBtn.classList.add('active', 'opened');
+                if (navbar) navbar.classList.add('taskbar-hidden');
+            } else {
+                window.location.href = 'index.html';
+            }
         }
-        
-        if (navbar) navbar.style.bottom = "-40px";
+        else if (mainWindow.classList.contains('window-minimized')) {
+            mainWindow.classList.remove('window-minimized');
+            if (appTaskbarBtn) appTaskbarBtn.classList.add('active', 'opened');
+            if (navbar) navbar.classList.add('taskbar-hidden');
+        }
     };
 
     if (restoreBtn) {
@@ -61,8 +74,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     if (appTaskbarBtn) {
-        appTaskbarBtn.addEventListener('click', () => {
-            if (!mainWindow.classList.contains('window-minimized') && mainWindow.style.display !== "none") {
+        appTaskbarBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            
+            const isMinimized = mainWindow.classList.contains('window-minimized');
+            const isClosed = mainWindow.style.display === "none" || mainWindow.classList.contains('window-closed');
+            
+            if (!isMinimized && !isClosed) {
                 hideBtn.click();
             } else {
                 restoreWindow();

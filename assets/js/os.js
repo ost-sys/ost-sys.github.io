@@ -1,7 +1,7 @@
 var userDeviceArray = [
     {device: 'Android', platform: /Android/},
-    {device: 'iPhone', platform: /iPhone/},
-    {device: 'iPad', platform: /iPad/},
+    {device: 'iPhone', platform: /iOS/},
+    {device: 'iPad', platform: /iPadOS/},
     {device: 'Symbian', platform: /Symbian/},
     {device: 'Windows Phone', platform: /Windows Phone/},
     {device: 'Tablet OS', platform: /Tablet OS/},
@@ -27,4 +27,4 @@ function getPlatform() {
 }
 document.write('<span class="fixed-ver">Ваша операционная система - ' 
     + getPlatform() + 
-    '<br> Powered by OST <br> Copyright © OST, 2022 - ' + new Date().getFullYear() + '</span>');
+    '<br> Powered by OST. Версия сайта: 4.1.1 <br> Copyright © OST, 2022 - ' + new Date().getFullYear() + '</span>');
